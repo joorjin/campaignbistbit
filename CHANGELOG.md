@@ -5,9 +5,14 @@
 ]
 ```
 
+[add_file]
 # Original version = [1]
 ```json
 "Partial version"="1.0.0":[
     "Description"=>" add style and img and js file // add index.html to view  " 
+]
+
+"Partial version"="1.0.1":[
+    "Description"=>" make layouts->dir | separate header and footer | make index , register and login  " 
 ]
 ```

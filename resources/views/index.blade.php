@@ -1,62 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.mastert')
+@section('title')
+    صفحه اصلی
+@endsection
 
-<head>
-	<title>کریپتو پلاس</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Cryptoplus Landing Page Template">
-	<meta name="keywords" content="cryptoplus, crypto, creative, html, landing_page">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon" />
+@section('style')
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/font-awesome.min.css" />
-	<link rel="stylesheet" href="css/fontiran.css" />
-	<link rel="stylesheet" href="css/themify-icons.css" />
-	<link rel="stylesheet" href="css/animate.css" />
-	<link rel="stylesheet" href="css/owl.carousel.css" />
-	<link rel="stylesheet" href="css/style.css" />
+@endsection
 
 
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
 
-</head>
 
-<body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
-
-	<!-- Header section -->
-	<header class="header-section clearfix">
-		<div class="container-fluid">
-			<a href="index.html" class="site-logo">
-				<img src="img/logo.png" alt="">
-			</a>
-			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
-			<a href="#" class="user"><i class="fa fa-user"></i></a>
-			<a href="../LTR/index.html" class="site-btn">نسخه انگلیسی</a>
-			<nav class="main-menu">
-				<ul class="menu-list">
-					<li><a href="index.html">صفحه اصلی</a></li>
-					<li><a href="#featuresection">ویژگی ها</a></li>
-					<li><a href="blog.html">اخبار</a></li>
-					<li><a href="about.html">درباره ما</a></li>
-					<li><a href="contact.html">تماس با ما</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<!-- Header section end -->
+@section('content')
 
 
 	<!-- Hero section -->
@@ -536,80 +490,4 @@
 	<!-- Blog section end -->
 
 
-	<!-- Footer section -->
-	<footer class="footer-section">
-		<div class="container">
-			<div class="row spad">
-				<div class="col-md-6 col-lg-3 footer-widget">
-					<img src="img/logo.png" class="mb-4" alt="">
-					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
-					<span>
-						<!-- طراحی شده با عشق توسط شرکت طراحی سایت سیترانت - جهت حمایت از ما، لطفاً این قسمت را حذف نکنید -->
-						&copy; <time datetime="1399">1399</time> تمام حقوق محفوظ است <i class="fa fa-heart-o"
-							aria-hidden="true"></i>
-						<!-- طراحی شده با عشق توسط شرکت طراحی سایت سیترانت - جهت حمایت از ما، لطفاً این قسمت را حذف نکنید --></span>
-				</div>
-				<div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
-					<h5 class="widget-title">راهنمای سایت</h5>
-					<ul>
-						<li><a href="#">ساخت کیف پول مجازی</a></li>
-						<li><a href="#">راهنمای رمز ارزها</a></li>
-						<li><a href="#">آموزش خرید بیت کوین</a></li>
-						<li><a href="#">آموزش فروش بیت کوین</a></li>
-						<li><a href="#">نمایش آنلاین قیمت</a></li>
-					</ul>
-				</div>
-				<div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
-					<h5 class="widget-title">لینک‌های مفید</h5>
-					<ul>
-						<li><a href="#">روش‌های کسب درآمد</a></li>
-						<li><a href="#">صرافی‌های مجاز</a></li>
-						<li><a href="#">قوانین دولت</a></li>
-						<li><a href="#">تبدیل رمز ارزها به ریال</a></li>
-						<li><a href="#">انواع کیف پول‌ها</a></li>
-					</ul>
-				</div>
-				<div class="col-md-6 col-lg-3 footer-widget pl-lg-5 pl-3">
-					<h5 class="widget-title">ما را دنبال کنید</h5>
-					<div class="social">
-						<a href="" class="facebook"><i class="fa fa-facebook"></i></a>
-						<a href="" class="linkedin"><i class="fa fa-linkedin"></i></a>
-						<a href="" class="instagram"><i class="fa fa-instagram"></i></a>
-						<a href="" class="twitter"><i class="fa fa-twitter"></i></a>
-						<a href="" class="telegram"><i class="fa fa-paper-plane"></i></a>
-						<a href="" class="youtube"><i class="fa fa-youtube"></i></a>
-						<a href="" class="pintrest"><i class="fa fa-pinterest"></i></a>
-						<a href="" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
-
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div class="row">
-					<div class="col-lg-4 store-links text-center text-lg-left pb-3 pb-lg-0">
-						<a href=""><img src="img/appstore.png" alt="" class="mr-2"></a>
-						<a href=""><img src="img/playstore.png" alt=""></a>
-					</div>
-					<div class="col-lg-8 text-center text-lg-right">
-						<ul class="footer-nav">
-							<li><a href="">قوانین و مقررات</a></li>
-							<li><a href="">عدم افشای اطلاعات</a></li>
-							<li><a href="">تأییدیه‌ها </a></li>
-							<li><a href="mailto:designer@sitranet.com">designer@sitranet.com</a></li>
-							<li><a href="tel:02112345678">(021) 12345678</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-
-	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/time.js"></script>
-</body>
-
-</html>
+	@endsection
