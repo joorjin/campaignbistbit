@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row spad">
             <div class="col-md-6 col-lg-3 footer-widget">
-                <img src="img/logo.png" class="mb-4" alt="">
+                <img src="img/logo.svg" class="mb-4" width="60%" alt="">
                 <p>درباره صرافی بیست بیت
                     صرافی بیست‌بیت یک صرافی آنلاین جهت مبادلات ارزهای رمزنگاری شده می‌باشد.
                     پشرو و پاسخگو بودن از اهداف مهم این مجموعه می‌باشد..</p>
@@ -74,6 +74,7 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/time.js"></script>
+@yield('script')
 </body>
 
 </html>

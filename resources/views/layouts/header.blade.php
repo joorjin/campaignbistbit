@@ -22,6 +22,12 @@
 	<link rel="stylesheet" href="css/owl.carousel.css" />
 	<link rel="stylesheet" href="css/style.css" />
 
+	<style>
+		.site-logo img{
+			width: 220px;
+			height: 100px;
+		}
+	</style>
     @yield('style')
 
 	<!--[if lt IE 9]>
@@ -41,7 +47,7 @@
 	<header class="header-section clearfix">
 		<div class="container-fluid">
 			<a href="index.html" class="site-logo">
-				<img src="img/logo.png" alt="">
+				<img src="img/logo.svg" alt="">
 			</a>
 			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
 			<a href="#" class="user"><i class="fa fa-user"></i></a>

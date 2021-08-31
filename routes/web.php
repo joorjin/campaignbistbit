@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::any('register', function () {
     return view('register');
 });
+
+Route::any('spin', function () {
+    return view('spin');
+});
