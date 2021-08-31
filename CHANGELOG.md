@@ -16,3 +16,11 @@
     "Description"=>" make layouts->dir | separate header and footer | make index , register and login  " 
 ]
 ```
+[edit_styles]
+# Original version = [2]
+```json
+"Partial version"="2.0.0":[
+    "Description"=>"  add spin and edit style index and add login popup " 
+]
+
+```
