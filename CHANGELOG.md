@@ -20,6 +20,7 @@
 # Original version = [2]
 ```json
 "Partial version"="2.0.0":[
+<<<<<<< HEAD
     "Description"=>"  add spin and edit style index and add login popup "
 ]
 "Partial version"="2.0.1":[
@@ -31,3 +32,9 @@
 ```json
 
 ```
+=======
+    "Description"=>"  add spin and edit style index and add login popup " 
+]
+
+```
+>>>>>>> 972c3671e87369e30025a7425372111deafa4939
