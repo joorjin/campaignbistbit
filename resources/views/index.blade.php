@@ -105,6 +105,17 @@
         width: 50%;
     }
 }
+
+.register input[type=tel]{
+    width: 100%;
+    text-align: center;
+}
+.register button{
+    width: 100px;
+    left: calc(50% - 50px);
+    position: relative;
+    margin-top: 10px;
+}
 </style>
 @endsection
 
@@ -139,8 +150,11 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-    <input type="text">
+    <p>لطفا شماره خود را وارد کنید.</p>
+    <form action="#" method="post" class="register">
+        <input type="tel" pattern="[0-9]{11}" name="" id="">
+        <button class="btn btn-success"> بزن بریم! </button>
+    </form>
   </div>
 
 </div>
@@ -153,7 +167,7 @@
                     <h2>با تولید سادگی نامفهوم از صنعت چاپ <span>بیت‌کوین</span> <br>با تولید سادگی نامفهوم از صنعت چاپ</h2>
                     <figure class="spin" id="spin" onclick="setTimeout(para2, 5000);">
                         {{-- <div onclick="spin()" style="width: 10px; height: 10px;background: #4989;"></div> --}}
-                        <img onclick="spin()" id="nologinn" src="img/WheelOfFortune.png" alt="">
+                        <img onclick="spin()" id="nologin" src="img/WheelOfFortune.png" alt="">
                     </figure>
                     <p id="show-award"></p>
 				</div>
@@ -163,68 +177,63 @@
 	<!-- Hero section end -->
     @section('script')  
         <script>
-            let num_spin
-            let num_case
-            const spin = () =>{
-                // num_case = Math.floor((Math.random()*12)+1)
-                num_case = 12;
-                num_spin = num_case
-        //        console.log(num_spin + " - " + num_spin*30)
+    let num_spin
+    let num_case
+     const spin = () =>{
+        num_case = 6
+         num_spin = num_case
+//        console.log(num_spin + " - " + num_spin*30)
+
+        $('.spin>img').addClass('para1');
+
+    }
+    
+    const para2 = () =>{
+        $('.spin>img').fadeOut(200)
+        $('.spin>img').removeAttr('class')
+        $('.spin>img').css('transform', 'rotate('+((num_spin*45)-20)+'deg)')
+         $('.spin>img').fadeIn(500)
         
-                $('.spin>img').addClass('para1');
+        switch(num_case){
+            case 8: $('p').text('your gift is pen'); break;
+            case 7: $('p').text('your gift is power bank'); break;
+            case 6: $('p').text('your gift is pen'); break;
+            case 5: $('p').text('your gift is pen drive'); break;
+            case 4: $('p').text('your gift is card holder'); break;
+            case 3: $('p').text('your gift is pen'); break;
+            case 2: $('p').text('your gift is pen driver'); break;
+            case 1: $('p').text('your gift is pen'); break;
+        }
         
-            }
-            
-            const para2 = () =>{
-                $('.spin>img').fadeOut(200)
-                $('.spin>img').removeAttr('class')
-                $('.spin>img').css('transform', 'rotate('+((num_spin*30)-15)+'deg)')
-                $('.spin>img').fadeIn(500)
-                
-                switch(num_case){
-                    case 12: $('#show-award').text('شما برنده ۶ در صد کد تخفیف شدید'); break;
-                    case 11: $('p').text('your gift is pen drive'); break;
-                    case 10: $('p').text('your gift is voucher'); break;
-                    case 9: $('p').text('your gift is card holder'); break;
-                    case 8: $('p').text('your gift is pen'); break;
-                    case 7: $('p').text('your gift is power bank'); break;
-                    case 6: $('p').text('your gift is pen'); break;
-                    case 5: $('p').text('your gift is pen drive'); break;
-                    case 4: $('p').text('your gift is card holder'); break;
-                    case 3: $('p').text('your gift is pen'); break;
-                    case 2: $('p').text('your gift is pen driver'); break;
-                    case 1: $('p').text('your gift is pen'); break;
-                }
-                
-                
-            }
+        
+    }
             
 
-            // Get the modal
-            var modal = document.getElementById("myModal");
+            // // Get the modal
+            // var modal = document.getElementById("myModal");
 
-            // Get the button that opens the modal
-            var btn = document.getElementById("nologin");
+            // // Get the button that opens the modal
+            // var btn = document.getElementById("nologin");
 
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+            // // Get the <span> element that closes the modal
+            // var span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks the button, open the modal 
-            btn.onclick = function() {
-            modal.style.display = "block";
-            }
+            // // When the user clicks the button, open the modal 
+            // btn.onclick = function() {
+            // modal.style.display = "block";
+            // }
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-            modal.style.display = "none";
-            }
+            // // When the user clicks on <span> (x), close the modal
+            // span.onclick = function() {
+            // modal.style.display = "none";
+            // }
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-            }
+            // // When the user clicks anywhere outside of the modal, close it
+            // window.onclick = function(event) {
+            // if (event.target == modal) {
+            //     modal.style.display = "none";
+            // }
+            // }
         </script>
     @endsection
 	@endsection

@@ -20,7 +20,14 @@
 # Original version = [2]
 ```json
 "Partial version"="2.0.0":[
-    "Description"=>"  add spin and edit style index and add login popup " 
+    "Description"=>"  add spin and edit style index and add login popup "
 ]
+"Partial version"="2.0.1":[
+    "Description"=>"  make spin and change  "
+]
+```
+[database]
+# Original version = [3]
+```json
 
 ```
