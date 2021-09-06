@@ -81,6 +81,7 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  margin-top: -50px;
 }
 
 /* The Close Button */
@@ -159,9 +160,10 @@
     <span class="close">&times;</span>
 
     <p>ابتدا شماره خود را وارد کنید.</p>
-    <form action="#" method="post" class="register">
+    <form action="add_phone" method="post" class="register">
+        @csrf
         <input type="tel" pattern="[0-9]{11}" name="phone" placeholder="شماره شما">
-         <input type="password" name="pass" id="pass" placeholder="یک پسورد برای خود انتخاب کنید">
+        <input type="password" name="pass" id="pass" placeholder="یک پسورد برای خود انتخاب کنید" minlength="8">
         <button class="btn btn-success"> بزن بریم! </button>
     </form>
 
@@ -171,7 +173,7 @@
 
      <!-- Hero section -->
 	<section class="spin-section">
-			<div class="row"> 
+			<div class="row">
                 <div class="col-md-0 col-lg-1"></div>
 				<div class="col-md-12 col-lg-11 hero-text">
                     <h2>با تولید سادگی نامفهوم از صنعت چاپ <span>بیت‌کوین</span> <br>با تولید سادگی نامفهوم از صنعت چاپ</h2>
@@ -184,10 +186,10 @@
                     <p id="show-award"></p>
 				</div>
 			</div>
-		
+
 	</section>
 	<!-- Hero section end -->
-    @section('script')  
+    @section('script')
         <script>
 
     let num_spin
@@ -200,13 +202,13 @@
         $('.spin>img').addClass('para1');
 
     }
-    
+
     const para2 = () =>{
         $('.spin>img').fadeOut(200)
         $('.spin>img').removeAttr('class')
         $('.spin>img').css('transform', 'rotate('+((num_spin*45)-20)+'deg)')
          $('.spin>img').fadeIn(500)
-        
+
         switch(num_case){
             case 8: $('p').text('your gift is pen'); break;
             case 7: $('p').text('your gift is power bank'); break;
@@ -217,11 +219,14 @@
             case 2: $('p').text('your gift is pen driver'); break;
             case 1: $('p').text('your gift is pen'); break;
         }
-        
-        
-    }
-            
 
+
+    }
+
+        </script>
+
+@if ($login)
+<script>
             // Get the modal
             var modal = document.getElementById("myModal");
 
@@ -231,7 +236,8 @@
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks the button, open the modal 
+
+            // When the user clicks the button, open the modal
             btn.onclick = function() {
             modal.style.display = "block";
             }
@@ -246,8 +252,29 @@
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-            }
+        }
+</script>
+@endif
 
-        </script>
+
+
+@error('phone')
+<script>
+    alert("{{ $message }}");
+</script>
+@enderror
+
+@error('pass')
+<script>
+    alert("{{ $message }}");
+</script>
+@enderror
+
+@isset($_GET['login_tr'])
+    <script>
+        alert('با موفقیت وارد حساب کاربری خود شدید');
+    </script>
+@endisset
+
     @endsection
 	@endsection

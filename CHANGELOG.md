@@ -15,6 +15,10 @@
 "Partial version"="1.0.1":[
     "Description"=>" make layouts->dir | separate header and footer | make index , register and login  " 
 ]
+
+"Partial version"="1.0.2":[
+    "Description"=>" indexController | UserController | fa in lang in resources |   " 
+]
 ```
 [edit_styles]
 # Original version = [2]
@@ -34,6 +38,14 @@
     "Partial version"="3.0.0":[
     "Description"=>" make migrate (database)  "
 ]
+```
 
+[tasks]
+# Original version = [4]
+```json
+
+    "Partial version"="4.0.0":[
+    "Description"=>" add fa lanh | make indexController function index | make register (login and signin) "
+]
 
 
