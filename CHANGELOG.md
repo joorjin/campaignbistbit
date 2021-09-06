@@ -30,6 +30,8 @@
 [database]
 # Original version = [3]
 ```json
-
+    "Partial version"="3.0.0":[
+    "Description"=>" make migrate (database)  "
+]
 ```
 
