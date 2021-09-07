@@ -37,6 +37,9 @@
 
     "Partial version"="3.0.0":[
     "Description"=>" make migrate (database)  "
+
+    "Partial version"="3.1.0":[
+    "Description"=>" make start controller | fix migrate"
 ]
 ```
 

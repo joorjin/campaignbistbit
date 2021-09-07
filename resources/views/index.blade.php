@@ -5,6 +5,10 @@
 
 @section('style')
 <style>
+    body{
+        overflow-x: hidden;
+        background: #f3f7f9;
+    }
     .spin-section{
         width: 100%;
     }
@@ -195,7 +199,7 @@
     let num_spin
     let num_case
      const spin = () =>{
-        num_case = 4
+        num_case = 8
          num_spin = num_case
 //        console.log(num_spin + " - " + num_spin*30)
 
@@ -210,7 +214,7 @@
          $('.spin>img').fadeIn(500)
 
         switch(num_case){
-            case 8: $('p').text('your gift is pen'); break;
+            case 8: $('p').text('400T'); break;
             case 7: $('p').text('your gift is power bank'); break;
             case 6: $('p').text('your gift is pen'); break;
             case 5: $('p').text('your gift is pen drive'); break;
@@ -225,7 +229,7 @@
 
         </script>
 
-@if ($login)
+@if (!$login)
 <script>
             // Get the modal
             var modal = document.getElementById("myModal");
@@ -242,7 +246,7 @@
             modal.style.display = "block";
             }
 
-            // When the user clicks on <span> (x), close the modal
+            // falseWhen the user clicks on <span> (x), close the modal
             span.onclick = function() {
             modal.style.display = "none";
             }
@@ -270,11 +274,21 @@
 </script>
 @enderror
 
-@isset($_GET['login_tr'])
+@isset($_GET['register'])
+        <script>
+            alert('حساب شما با موفقیت ساخته شد.');
+            window.location.href = "/";
+        </script>
+@endisset
+
+@isset($_GET['login'])
     <script>
         alert('با موفقیت وارد حساب کاربری خود شدید');
+        window.location.href = "/";
     </script>
 @endisset
+
+
 
     @endsection
 	@endsection

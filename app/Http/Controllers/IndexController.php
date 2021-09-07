@@ -9,15 +9,19 @@ class IndexController extends Controller
 {
     public function index(Request $reques)
     {
-        $login = true;
+        $login = false;
         if (isset($_COOKIE['token'])) {
             $user = User::
             where('remember_token',$_COOKIE['token'])
             ->get()->toArray();
 
-            if ($user != null) {
-                $login=false;
-                
+            // اگر ثبت نام نبود
+            if ($user == null) {
+                return redirect('/add_phone');
+
+            }
+            else{
+                $login=true;
             }
         }
 
