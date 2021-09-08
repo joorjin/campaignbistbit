@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Awards;
+use App\Models\Queue;
 use App\Models\Start;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -211,6 +212,19 @@ class StartController extends Controller
             $start->number_left= 6;
             $start->type = 'discount';
             $start->save();
+
+
+            sleep(5);
+            $awards = Awards::
+            where('time_open','<',Carbon::now())
+            ->get();
+            $number =count( $awards);
+
+            for ($i=0; $i < $number; $i++) {
+                $queues = new Queue();
+                $queues->award_id = $awards[$i]->id;
+                $queues->save();
+            }
 
 
 echo "با  موفقیت انجام شد";

@@ -4,6 +4,7 @@
 @endsection
 
 @section('style')
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 <style>
     body{
         overflow-x: hidden;
@@ -181,10 +182,10 @@
                 <div class="col-md-0 col-lg-1"></div>
 				<div class="col-md-12 col-lg-11 hero-text">
                     <h2>با تولید سادگی نامفهوم از صنعت چاپ <span>بیت‌کوین</span> <br>با تولید سادگی نامفهوم از صنعت چاپ</h2>
-                    <figure class="spin" id="spin" onclick="setTimeout(para2, 5000);">
+                    <figure class="spin" id="spin">
                         {{-- <div onclick="spin()" style="width: 10px; height: 10px;background: #4989;"></div> --}}
 
-                        <img onclick="spin()" id="nologin" src="img/WheelOfFortune.png" alt="">
+                        <img onclick="searchAward()" id="nologin" src="img/WheelOfFortune.png" alt="">
 
                     </figure>
                     <p id="show-award"></p>
@@ -195,6 +196,12 @@
 	<!-- Hero section end -->
     @section('script')
         <script>
+
+
+
+
+
+
 
     let num_spin
     let num_case
@@ -226,6 +233,12 @@
 
 
     }
+
+    function searchAward(params) {
+        spin();
+        setTimeout(para2, 5000);
+    }
+
 
         </script>
 

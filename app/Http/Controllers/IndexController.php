@@ -17,8 +17,8 @@ class IndexController extends Controller
 
             // اگر ثبت نام نبود
             if ($user == null) {
+                setcookie("token", "", time() - 3600);
                 return redirect('/add_phone');
-
             }
             else{
                 $login=true;

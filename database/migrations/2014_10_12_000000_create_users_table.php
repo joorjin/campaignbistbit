@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('phone')->unique();
             // $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->timestamp('next_spin')->nullable();
             $table->string('invitation_code');
             $table->rememberToken()->nullable();
             $table->timestamps();

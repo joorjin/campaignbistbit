@@ -12,16 +12,17 @@ class UserController extends Controller
         $phone = $request->phone;
         $pass = $request->pass;
 
+        $validated = $request->validate([
+            'phone' => 'required|size:11',
+            'pass' => 'required | confirmed',
+        ]);
+
 
         $user_login = User::
         where('phone',$phone)
         ->get();
 
         if ($user_login->toArray() == null) {
-            $validated = $request->validate([
-                'phone' => 'required|size:11',
-                'pass' => 'required',
-            ]);
 
             // rand
                 $seed = str_split('ABCDEFGHIJKLMNOPQRSTUVWXYZ'
