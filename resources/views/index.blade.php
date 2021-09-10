@@ -195,19 +195,15 @@
 	</section>
 	<!-- Hero section end -->
     @section('script')
-        <script>
+<script>
 
 
+     const spin = (num_case_params,name_awrads) =>{
 
 
-
-
-
-    let num_spin
-    let num_case
-     const spin = () =>{
-        num_case = 8
-         num_spin = num_case
+        num_case = num_case_params
+        num_spin = num_case
+        name_awrads_par = name_awrads
 //        console.log(num_spin + " - " + num_spin*30)
 
         $('.spin>img').addClass('para1');
@@ -221,26 +217,63 @@
          $('.spin>img').fadeIn(500)
 
         switch(num_case){
-            case 8: $('p').text('400T'); break;
-            case 7: $('p').text('your gift is power bank'); break;
-            case 6: $('p').text('your gift is pen'); break;
-            case 5: $('p').text('your gift is pen drive'); break;
-            case 4: $('p').text('your gift is card holder'); break;
-            case 3: $('p').text('your gift is pen'); break;
-            case 2: $('p').text('your gift is pen driver'); break;
-            case 1: $('p').text('your gift is pen'); break;
+            case num_spin: $('p').text(' شما برنده '+name_awrads_par+' شدید. '); break;
         }
-
-
     }
+
 
     function searchAward(params) {
-        spin();
-        setTimeout(para2, 5000);
+        window.location.href= '/checkLicense';
+    }
+</script>
+
+@isset($awrads)
+<?php
+foreach ($awrads as $item) {
+    if ($item->type == 'physical') {
+        if ($item->name == 'ledger nano S') {
+            $number = 8;
+        }
+        if ($item->name == 'mi band 5') {
+            $number = 4;
+        }
+    }
+    elseif ($item->type == 'sat') {
+        $number = rand(1,3);
+        if ($number == 1) {
+            $number = 1;
+        }
+        if ($number == 2) {
+            $number = 5;
+        }
+        if ($number == 3) {
+            $number = 7;
+        }
+    }
+    elseif ($item->type == 'discount') {
+        $number = rand(1,2);
+        if ($number == 1) {
+            $number = 2;
+        }
+        if ($number == 2) {
+            $number = 6;
+        }
+    }
+    elseif ($item->type == 'cash') {
+        $number = 3;
     }
 
 
-        </script>
+echo '<script type="text/javascript">',
+'spin('.$number.',"'.$item->name.'");',
+'setTimeout(para2, 5000);',
+'</script>'
+;
+}
+
+?>
+@endisset
+
 
 @if (!$login)
 <script>
@@ -271,6 +304,7 @@
             }
         }
 </script>
+
 @endif
 
 
@@ -286,6 +320,22 @@
     alert("{{ $message }}");
 </script>
 @enderror
+
+@isset($_GET['pass'])
+        <script>
+            alert('پسورد را اشتباه وارد کردید!');
+            window.location.href = "/";
+        </script>
+@endisset
+
+@isset($_GET['spin_permission'])
+        <script>
+            alert('هر هفته یک بار اجازه شرکت در چالش را دارید . می توانید با دعوت هر نفر یک بار دیگر شرکت کنید');
+            window.location.href = "/";
+        </script>
+@endisset
+
+
 
 @isset($_GET['register'])
         <script>

@@ -7,18 +7,19 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\QueueController;
 
 
-
-
 Route::any('/', [IndexController::class , 'index']);
 
 Route::any('/add_phone', [UserController::class, 'add_phone']);
 
-// اگر شماره بود و پسورد هم درست بود
 Route::any('/go_phone', [UserController::class, 'add_phone']);
+
+
+
+//  انتخواب جایزه
+Route::any('/checkLicense', [QueueController::class, 'checkLicense']);
+Route::any('/selectAward', [QueueController::class, 'selectAward']);
 
 // start
 Route::view('/start', 'start');
 Route::any('/start_challenge', [StartController::class, 'start']);
 
-//  انتخواب جایزه
-Route::any('/selectAward', [QueueController::class, 'selectAward']);

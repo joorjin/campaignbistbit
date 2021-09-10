@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class IndexController extends Controller
 {
     public function index(Request $reques)
     {
+
         $login = false;
         if (isset($_COOKIE['token'])) {
             $user = User::
@@ -24,6 +26,15 @@ class IndexController extends Controller
                 $login=true;
             }
         }
+
+        if (Session::has('awrads'))
+        {
+            $awrads = session('awrads');
+            $reques->session()->forget('awrads');
+            return view('index',compact('login','awrads'));
+        }
+
+
 
         return view('index',compact('login'));
     }
