@@ -19,7 +19,6 @@ class CreateActiveAwardsTable extends Migration
             $table->string('code');
             $table->integer('user_id');
             $table->integer('status');
-            $table->string('type');
             $table->timestamps();
         });
     }

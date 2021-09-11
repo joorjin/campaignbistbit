@@ -129,6 +129,11 @@
     position: relative;
     margin-top: 20px;
 }
+.spinImg{
+    position: relative;
+    width: 84% !important;
+    left: -8%;
+}
 </style>
 @endsection
 
@@ -182,13 +187,15 @@
                 <div class="col-md-0 col-lg-1"></div>
 				<div class="col-md-12 col-lg-11 hero-text">
                     <h2>با تولید سادگی نامفهوم از صنعت چاپ <span>بیت‌کوین</span> <br>با تولید سادگی نامفهوم از صنعت چاپ</h2>
-                    <figure class="spin" id="spin">
-                        {{-- <div onclick="spin()" style="width: 10px; height: 10px;background: #4989;"></div> --}}
 
-                        <img onclick="searchAward()" id="nologin" src="img/WheelOfFortune.png" alt="">
+                    <figure class="spin">
+                        {{-- <div onclick="spin()" style="width: 10px; height: 10px;background: #4989;"></div> --}}
+                        <div id="spin"></div>
+                        <img onclick="searchAward()" id="nologin" src="img/WheelOfFortune.png" class="spinImg" alt="">
 
                     </figure>
                     <p id="show-award"></p>
+
 				</div>
 			</div>
 
@@ -219,6 +226,8 @@
         switch(num_case){
             case num_spin: $('p').text(' شما برنده '+name_awrads_par+' شدید. '); break;
         }
+        $('.spin>img').fadeIn(500)
+        $('.spin>img').addClass('spinImg');
     }
 
 
@@ -274,7 +283,9 @@ echo '<script type="text/javascript">',
 ?>
 @endisset
 
-
+@isset($_GET['login'])
+    <?php $login=$_GET['login']; ?>
+@endisset
 @if (!$login)
 <script>
             // Get the modal
