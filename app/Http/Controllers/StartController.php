@@ -126,7 +126,7 @@ class StartController extends Controller
 
             //400 T
             $start = new Awards;
-            $start->name = '200 تومان';
+            $start->name = '400,000 تومان';
             $start->delivery_in_time = 11520;
             $start->time_open=Carbon::now()->addMinutes(11520);
             $start->number = 10;
@@ -138,7 +138,7 @@ class StartController extends Controller
 
             //200 T
             $start = new Awards;
-            $start->name = '200 تومان';
+            $start->name = '200,000 تومان';
             $start->delivery_in_time = 10080;
             $start->time_open=Carbon::now()->addMinutes(10080);
             $start->number = 10;
@@ -149,7 +149,7 @@ class StartController extends Controller
 
             //100 T
             $start = new Awards;
-            $start->name = '100 تومان';
+            $start->name = '100,000 تومان';
             $start->delivery_in_time = 6660;
             $start->time_open=Carbon::now()->addMinutes(6660);
             $start->number = 20;
@@ -214,7 +214,7 @@ class StartController extends Controller
             $start->save();
 
 
-            sleep(5);
+            sleep(2);
             $awards = Awards::
             where('time_open','<',Carbon::now())
             ->get();
@@ -224,6 +224,12 @@ class StartController extends Controller
                 $queues = new Queue();
                 $queues->award_id = $awards[$i]->id;
                 $queues->save();
+
+                Awards ::
+                where('id',$awards[$i]->id)
+                ->update([
+                    "time_open"=> Carbon::now()->addMinutes($awards[$i]->delivery_in_time),
+                ]);
             }
 
 

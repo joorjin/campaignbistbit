@@ -51,27 +51,32 @@ class QueueController extends Controller
         }
 
         // add next_spin
-        // User::
-        // where('id',$user->id)
-        // ->update([
-        //     "next_spin"=> Carbon::now()->addMinutes(10080)
-        // ]);
+        User::
+        where('id',$user->id)
+        ->update([
+            "next_spin"=> Carbon::now()->addMinutes(10080)
+        ]);
 
 
         $queue = Queue::get();
         $award_id = $queue[0]->award_id;
 
-        
+
 
         $awrads =  Awards::
         where('id',$award_id)
         ->get();
+
         session(['awrads' => $awrads]);
 
         foreach ($awrads as $item) {
             $award_id = $item->id;
-            $awards_type = $item->awards;
+            $awards_type = $item->type;
         }
+
+        $del = Queue::where('award_id', $award_id)->delete();
+
+
         $award_wons = new Award_won;
         $award_wons->user_id = $user->id;
         $award_wons->awards_id = $award_id;
@@ -91,12 +96,40 @@ class QueueController extends Controller
             // end rand
             $award_code = $rand;
 
-        $active_awards = new Active_awards;
-        $active_awards->award_id = $award_id;
-        $active_awards->code = $award_code;
-        $active_awards->user_id = $user->id;
-        $active_awards->status = 0;
-        $active_awards->save();
+
+        if ($awards_type == 'cash' || $awards_type == 'discount') {
+            $active_awards = new Active_awards;
+            $active_awards->award_id = $award_id;
+            $active_awards->code = $award_code;
+            $active_awards->user_id = $user->id;
+            $active_awards->status = 0;
+            $active_awards->save();
+        }
+
+
+
+
+        $awards_add_queue = Awards::
+        where('time_open','<',Carbon::now())
+        ->get();
+        $number =count( $awards_add_queue);
+
+        for ($i=0; $i < $number; $i++) {
+            $queues = new Queue();
+            $queues->award_id = $awards_add_queue[$i]->id;
+            $queues->save();
+
+                    // تغیر تایم بعدی جایره
+            Awards ::
+            where('id',$awards_add_queue[$i]->id)
+            ->update([
+                "time_open"=> Carbon::now()->addMinutes($awards_add_queue[$i]->delivery_in_time),
+                "number_left"=> $awards_add_queue[$i]->number_left - 1
+            ]);
+        }
+
+
+
         return redirect('/#spin');
     }
 }
