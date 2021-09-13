@@ -11,6 +11,7 @@
                     <!-- طراحی شده با عشق توسط شرکت طراحی سایت سیترانت - جهت حمایت از ما، لطفاً این قسمت را حذف نکنید -->
                     &copy; <time datetime="<?php echo Verta()->year; ?>"><?php echo Verta()->year; ?></time> تمام حقوق محفوظ است <i class="fa fa-copyright"
                         aria-hidden="true"></i>
+                        <code  style="font-size: 5px"> 1 </code>
                     <!-- طراحی شده با عشق توسط شرکت طراحی سایت سیترانت - جهت حمایت از ما، لطفاً این قسمت را حذف نکنید --></span>
             </div>
             <div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
