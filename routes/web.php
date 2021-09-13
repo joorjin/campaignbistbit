@@ -24,4 +24,4 @@ Route::view('/start', 'start');
 Route::any('/start_challenge', [StartController::class, 'start']);
 
 
-Route::any('/setup', [SetupController::class, 'setup']);
+Route::any('/gitpull2903', [SetupController::class, 'setup']);

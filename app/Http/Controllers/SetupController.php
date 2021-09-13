@@ -12,7 +12,7 @@ use Symfony\Component\Process\Process;
 class SetupController extends Controller
 {
     public function setup(){
-        $process = Process::fromShellCommandline('git push');
+        $process = Process::fromShellCommandline('git pull origin master');
 
         $process->run(function ($type, $buffer) {
             if (Process::ERR === $type) {
