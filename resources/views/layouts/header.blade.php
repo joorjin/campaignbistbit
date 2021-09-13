@@ -51,6 +51,7 @@
 			</a>
 			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
 			<a href="#" class="user"><i class="fa fa-user"></i></a>
+			<a href="../LTR/index.html" class="site-btn">پنل کاربری</a>
 			<nav class="main-menu">
 				<ul class="menu-list">
 					<li><a href="https://bistbit.com/">صفحه اصلی</a></li>

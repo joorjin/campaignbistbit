@@ -1,26 +1,27 @@
 <?php
 
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\StartController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\QueueController;
+use App\Http\Controllers\SetupController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::any('/', [IndexController::class , 'index']);
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::any('/add_phone', [UserController::class, 'add_phone']);
 
-Route::any('register', function () {
-    return view('register');
-});
+Route::any('/go_phone', [UserController::class, 'add_phone']);
 
-Route::any('spin', function () {
-    return view('spin');
-});
+
+
+//  انتخواب جایزه
+Route::any('/checkLicense', [QueueController::class, 'checkLicense']);
+Route::any('/selectAward', [QueueController::class, 'selectAward']);
+
+// start
+Route::view('/start', 'start');
+Route::any('/start_challenge', [StartController::class, 'start']);
+
+
+Route::any('/gitpull2903', [SetupController::class, 'setup']);

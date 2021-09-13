@@ -4,7 +4,12 @@
 @endsection
 
 @section('style')
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 <style>
+    body{
+        overflow-x: hidden;
+        background: #f3f7f9;
+    }
     .spin-section{
         width: 100%;
     }
@@ -81,6 +86,7 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  margin-top: -50px;
 }
 
 /* The Close Button */
@@ -105,20 +111,29 @@
         width: 50%;
     }
 }
-<<<<<<< HEAD
 
 .register input[type=tel]{
     width: 100%;
     text-align: center;
+    border: 1px solid #00bf16;
+}
+.register input[type=password]{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #00bf16;
 }
 .register button{
     width: 100px;
     left: calc(50% - 50px);
     position: relative;
-    margin-top: 10px;
+    margin-top: 20px;
 }
-=======
->>>>>>> 972c3671e87369e30025a7425372111deafa4939
+.spinImg{
+    position: relative;
+    width: 84% !important;
+    left: -8%;
+}
 </style>
 @endsection
 
@@ -153,138 +168,126 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-<<<<<<< HEAD
-    <p>لطفا شماره خود را وارد کنید.</p>
-    <form action="#" method="post" class="register">
-        <input type="tel" pattern="[0-9]{11}" name="" id="">
+
+    <p>ابتدا شماره خود را وارد کنید.</p>
+    <form action="add_phone" method="post" class="register">
+        @csrf
+        <input type="tel" pattern="[0-9]{11}" name="phone" placeholder="شماره شما">
+        <input type="password" name="pass" id="pass" placeholder="یک پسورد برای خود انتخاب کنید" minlength="8">
         <button class="btn btn-success"> بزن بریم! </button>
     </form>
-=======
-    <p>Some text in the Modal..</p>
-    <input type="text">
->>>>>>> 972c3671e87369e30025a7425372111deafa4939
+
   </div>
 
 </div>
 
      <!-- Hero section -->
 	<section class="spin-section">
-			<div class="row"> 
+			<div class="row">
                 <div class="col-md-0 col-lg-1"></div>
 				<div class="col-md-12 col-lg-11 hero-text">
                     <h2>با تولید سادگی نامفهوم از صنعت چاپ <span>بیت‌کوین</span> <br>با تولید سادگی نامفهوم از صنعت چاپ</h2>
-                    <figure class="spin" id="spin" onclick="setTimeout(para2, 5000);">
+
+                    <figure class="spin">
                         {{-- <div onclick="spin()" style="width: 10px; height: 10px;background: #4989;"></div> --}}
-<<<<<<< HEAD
-                        <img onclick="spin()" id="nologin" src="img/WheelOfFortune.png" alt="">
-=======
-                        <img onclick="spin()" id="nologinn" src="img/WheelOfFortune.png" alt="">
->>>>>>> 972c3671e87369e30025a7425372111deafa4939
+                        <div id="spin"></div>
+                        <img onclick="searchAward()" id="nologin" src="img/WheelOfFortune.png" class="spinImg" alt="">
+
                     </figure>
                     <p id="show-award"></p>
+
 				</div>
 			</div>
-		
+
 	</section>
 	<!-- Hero section end -->
-    @section('script')  
-        <script>
-<<<<<<< HEAD
-    let num_spin
-    let num_case
-     const spin = () =>{
-        num_case = 6
-         num_spin = num_case
+    @section('script')
+<script>
+
+
+     const spin = (num_case_params,name_awrads) =>{
+
+
+        num_case = num_case_params
+        num_spin = num_case
+        name_awrads_par = name_awrads
 //        console.log(num_spin + " - " + num_spin*30)
 
         $('.spin>img').addClass('para1');
 
     }
-    
+
     const para2 = () =>{
         $('.spin>img').fadeOut(200)
         $('.spin>img').removeAttr('class')
         $('.spin>img').css('transform', 'rotate('+((num_spin*45)-20)+'deg)')
          $('.spin>img').fadeIn(500)
-        
+
         switch(num_case){
-            case 8: $('p').text('your gift is pen'); break;
-            case 7: $('p').text('your gift is power bank'); break;
-            case 6: $('p').text('your gift is pen'); break;
-            case 5: $('p').text('your gift is pen drive'); break;
-            case 4: $('p').text('your gift is card holder'); break;
-            case 3: $('p').text('your gift is pen'); break;
-            case 2: $('p').text('your gift is pen driver'); break;
-            case 1: $('p').text('your gift is pen'); break;
+            case num_spin: $('p').text(' شما برنده '+name_awrads_par+' شدید. '); break;
         }
-        
-        
+        $('.spin>img').fadeIn(500)
+        $('.spin>img').addClass('spinImg');
     }
-            
 
-            // // Get the modal
-            // var modal = document.getElementById("myModal");
 
-            // // Get the button that opens the modal
-            // var btn = document.getElementById("nologin");
+    function searchAward(params) {
+        window.location.href= '/checkLicense';
+    }
+</script>
 
-            // // Get the <span> element that closes the modal
-            // var span = document.getElementsByClassName("close")[0];
+@isset($awrads)
+<?php
+foreach ($awrads as $item) {
+    if ($item->type == 'physical') {
+        if ($item->name == 'ledger nano S') {
+            $number = 8;
+        }
+        if ($item->name == 'mi band 5') {
+            $number = 4;
+        }
+    }
+    elseif ($item->type == 'sat') {
+        $number = rand(1,3);
+        if ($number == 1) {
+            $number = 1;
+        }
+        if ($number == 2) {
+            $number = 5;
+        }
+        if ($number == 3) {
+            $number = 7;
+        }
+    }
+    elseif ($item->type == 'discount') {
+        $number = rand(1,2);
+        if ($number == 1) {
+            $number = 2;
+        }
+        if ($number == 2) {
+            $number = 6;
+        }
+    }
+    elseif ($item->type == 'cash') {
+        $number = 3;
+    }
 
-            // // When the user clicks the button, open the modal 
-            // btn.onclick = function() {
-            // modal.style.display = "block";
-            // }
 
-            // // When the user clicks on <span> (x), close the modal
-            // span.onclick = function() {
-            // modal.style.display = "none";
-            // }
+echo '<script type="text/javascript">',
+'spin('.$number.',"'.$item->name.'");',
+'setTimeout(para2, 5000);',
+'</script>'
+;
+}
 
-            // // When the user clicks anywhere outside of the modal, close it
-            // window.onclick = function(event) {
-            // if (event.target == modal) {
-            //     modal.style.display = "none";
-            // }
-            // }
-=======
-            let num_spin
-            let num_case
-            const spin = () =>{
-                // num_case = Math.floor((Math.random()*12)+1)
-                num_case = 12;
-                num_spin = num_case
-        //        console.log(num_spin + " - " + num_spin*30)
-        
-                $('.spin>img').addClass('para1');
-        
-            }
-            
-            const para2 = () =>{
-                $('.spin>img').fadeOut(200)
-                $('.spin>img').removeAttr('class')
-                $('.spin>img').css('transform', 'rotate('+((num_spin*30)-15)+'deg)')
-                $('.spin>img').fadeIn(500)
-                
-                switch(num_case){
-                    case 12: $('#show-award').text('شما برنده ۶ در صد کد تخفیف شدید'); break;
-                    case 11: $('p').text('your gift is pen drive'); break;
-                    case 10: $('p').text('your gift is voucher'); break;
-                    case 9: $('p').text('your gift is card holder'); break;
-                    case 8: $('p').text('your gift is pen'); break;
-                    case 7: $('p').text('your gift is power bank'); break;
-                    case 6: $('p').text('your gift is pen'); break;
-                    case 5: $('p').text('your gift is pen drive'); break;
-                    case 4: $('p').text('your gift is card holder'); break;
-                    case 3: $('p').text('your gift is pen'); break;
-                    case 2: $('p').text('your gift is pen driver'); break;
-                    case 1: $('p').text('your gift is pen'); break;
-                }
-                
-                
-            }
-            
+?>
+@endisset
 
+@isset($_GET['login'])
+    <?php $login=$_GET['login']; ?>
+@endisset
+@if (!$login)
+<script>
             // Get the modal
             var modal = document.getElementById("myModal");
 
@@ -294,12 +297,13 @@
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks the button, open the modal 
+
+            // When the user clicks the button, open the modal
             btn.onclick = function() {
             modal.style.display = "block";
             }
 
-            // When the user clicks on <span> (x), close the modal
+            // falseWhen the user clicks on <span> (x), close the modal
             span.onclick = function() {
             modal.style.display = "none";
             }
@@ -309,8 +313,56 @@
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-            }
->>>>>>> 972c3671e87369e30025a7425372111deafa4939
+        }
+</script>
+
+@endif
+
+
+
+@error('phone')
+<script>
+    alert("{{ $message }}");
+</script>
+@enderror
+
+@error('pass')
+<script>
+    alert("{{ $message }}");
+</script>
+@enderror
+
+@isset($_GET['pass'])
+        <script>
+            alert('پسورد را اشتباه وارد کردید!');
+            window.location.href = "/";
         </script>
+@endisset
+
+@isset($_GET['spin_permission'])
+        <script>
+            alert('هر هفته یک بار اجازه شرکت در چالش را دارید . می توانید با دعوت هر نفر یک بار دیگر شرکت کنید');
+            window.location.href = "/";
+        </script>
+@endisset
+
+
+
+@isset($_GET['register'])
+        <script>
+            alert('حساب شما با موفقیت ساخته شد.');
+            window.location.href = "/";
+        </script>
+@endisset
+
+@isset($_GET['login'])
+    <script>
+        alert('با موفقیت وارد حساب کاربری خود شدید');
+        window.location.href = "/";
+    </script>
+@endisset
+
+
+
     @endsection
 	@endsection
