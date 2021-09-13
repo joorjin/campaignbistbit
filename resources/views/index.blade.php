@@ -4,6 +4,7 @@
 @endsection
 
 @section('style')
+
 <meta name="csrf-token" content="{{ csrf_token() }}" />
 <style>
     body{
