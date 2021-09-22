@@ -505,6 +505,17 @@ header .Caracter{
         width: 14%;
     }
 
+    .part3 .text {
+        font-family: Lalezar;
+        right: -8%;
+        top: -369px;
+        color: #fff;
+        font-size: 23px;
+        width: 52%;
+        position: relative;
+        text-align: center;
+    }
+
     .part2 .text1{
         font-size: 28px;
         line-height: 26px;
