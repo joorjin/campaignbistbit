@@ -323,6 +323,55 @@ header .Caracter{
     background: #000000;
 }
 
+
+
+@media screen and (min-width: 300px) {
+    .part3 .spinImg {
+        width: 250px;
+    }
+
+    .part3 .spin {
+        position: relative;
+        margin-top: 5%;
+        width: 250px;
+        height: 250px;
+        background: #fff;
+        right: calc(90% - 200px);
+        border-radius: 50%;
+    }
+
+
+    .part2 {
+        height: 200px;
+    }
+
+    .part2 .caracter {
+        margin-top: -85px;
+        margin-left: 70%;
+        width: 16%;
+    }
+
+    .part2 .text1{
+        font-size: 17px;
+    }
+
+    .part2 .text2{
+        font-size: 15px;
+        line-height: 3px;
+        height: 150px;
+    }
+
+    .part2 .text2 b{
+        line-height: 5px;
+        font-size: 14px;
+    }
+    .part2 .text3{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+}
+
 @media screen and (min-width: 400px) {
     .part3 .spinImg {
         width: 250px;
@@ -602,6 +651,7 @@ header .Caracter{
 
 @media screen and (max-width: 1000px) {
     header{
+        top: 74px;
         height: 500px;
     }
     .part3 .Triangle{
@@ -610,8 +660,9 @@ header .Caracter{
 }
 
 @media screen and (max-width: 800px) {
-    header{
-        height: 268px;
+    header {
+        height: 450px;
+
     }
 
     header .text{
@@ -628,13 +679,20 @@ header .Caracter{
     font-size: 14px;
     }
 }
+
+@media screen and (max-width: 700px) {
+    header {
+        height: 350px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .navbar-brand img {
         margin-left: 36px;
         width: 103px;
     }
     header{
-        height: 300px;
+        height: 350px;
     }
     header .text{
         line-height: 124%;
@@ -649,10 +707,28 @@ header .Caracter{
         font-weight: bolder;
     font-size: 11px;
     }
+    .part3{
+        height: 600px;
+    }
+    .part3 .text{
+        font-size: 17px;
+    }
+    .part3 .text h2 {
+        font-size: 50px;
+        font-weight: bolder;
+        width: 100%;
+    }
+    .part3 .spin-loc {
+        position: relative;
+        width: 200px;
+        top: 326px;
+        right: calc(50% - 100px);
+    }
+
 }
 @media screen and (max-width: 400px) {
     header{
-        height: 200px;
+        height: 300px;
     }
     header .text{
         line-height: 59%;

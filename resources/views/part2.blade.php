@@ -7,6 +7,7 @@
         <p>امتیاز شما :25</p>
       </div>
       <div class="text2">
+          <br>
         <b>جوایز من</b>
         <p></p>
         @foreach ($award_wonss as $item)
