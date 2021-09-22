@@ -6,6 +6,7 @@
 
 @section('head')
 
+<style>
 
 
     .para1{
