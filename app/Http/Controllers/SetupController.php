@@ -12,7 +12,10 @@ use Symfony\Component\Process\Process;
 class SetupController extends Controller
 {
     public function setup(){
-        $process = Process::fromShellCommandline('git pull origin master');
+        // $process = Process::fromShellCommandline('git fetch https://github.com/joorjin/campaignbistbit.git');
+        // $process = Process::fromShellCommandline('git reset --hard origin/master');
+
+        $process = Process::fromShellCommandline('git pull https://github.com/joorjin/campaignbistbit.git');
 
         $process->run(function ($type, $buffer) {
             if (Process::ERR === $type) {
