@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>@yield('title')</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Cryptoplus Landing Page Template">
-	<meta name="keywords" content="cryptoplus, crypto, creative, html, landing_page">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="js/icon.js" crossorigin="anonymous"></script>
 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/font-awesome.min.css" />
-	<link rel="stylesheet" href="css/fontiran.css" />
-	<link rel="stylesheet" href="css/themify-icons.css" />
-	<link rel="stylesheet" href="css/animate.css" />
-	<link rel="stylesheet" href="css/owl.carousel.css" />
-	<link rel="stylesheet" href="css/style.css" />
 
-	<style>
-		.site-logo img{
-			width: 220px;
-			height: 100px;
-		}
-	</style>
-    @yield('style')
 
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+
+    @yield('head')
+
+
 
 </head>
-
 <body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
+  <!--Get your own code at fontawesome.com-->
+  </head>
+  <body>
 
-	<!-- Header section -->
-	<header class="header-section clearfix">
-		<div class="container-fluid">
-			<a href="index.html" class="site-logo">
-				<img src="img/logo.svg" alt="">
-			</a>
-			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
-			<a href="#" class="user"><i class="fa fa-user"></i></a>
-			<a href="../LTR/index.html" class="site-btn">پنل کاربری</a>
-			<nav class="main-menu">
-				<ul class="menu-list">
-					<li><a href="https://bistbit.com/">صفحه اصلی</a></li>
-					<li><a href="#featuresection"> گردونه</a></li>
-					<li><a href="https://mag.bistbit.com/category/news/">اخبار</a></li>
-					<li><a href="https://bistbit.com/index/about">درباره ما</a></li>
-					<li><a href="https://bistbit.com/index/contact">تماس با ما</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<!-- Header section end -->
+
+
+
+
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand logo" href="#"><img src="img/logo.svg" alt="bistbit"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fas fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">صفحه اصلی <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">گردونه</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">اخبار</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">درباره ما</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">تماس با ما</a>
+              </li>
+          </ul>
+        </div>
+    </nav>
+    <header>
+        <img src="img/01-h (3).png" alt="header" class="background">
+        <!-- <img src="img/Stars.png" alt="star" class="star"> -->
+        <img src="img/Caracter.png" alt="bistbit" class="Caracter">
+        <div class="text">
+          <h3>جشنواره پاییزه صرافی بیست بیت</h3>
+          <h2>بیست باش !</h2>
+          <p>عضویت و احراز هویت:۵ =امتیاز</p>
+          <p>هر رفرال ثبت نام=۱امتیاز</p>
+          <p>هر رفرال احراز هویت شده=۵امتیاز</p>
+          <br>
+          <a href="#spin-location"><button> شانستو امتحان کن </button></a>
+        </div>
+    </header>

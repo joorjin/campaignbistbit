@@ -51,15 +51,16 @@ class QueueController extends Controller
         }
 
         // add next_spin
-        User::
-        where('id',$user->id)
-        ->update([
-            "next_spin"=> Carbon::now()->addMinutes(10080)
-        ]);
+        // User::
+        // where('id',$user->id)
+        // ->update([
+        //     "next_spin"=> Carbon::now()->addMinutes(10080)
+        // ]);
 
 
         $queue = Queue::get();
         $award_id = $queue[0]->award_id;
+        $queue_id=  $queue[0]->id;
 
 
 
@@ -74,7 +75,8 @@ class QueueController extends Controller
             $awards_type = $item->type;
         }
 
-        $del = Queue::where('award_id', $award_id)->delete();
+
+        $del = Queue::where('id', $queue_id)->delete();
 
 
         $award_wons = new Award_won;
@@ -130,6 +132,6 @@ class QueueController extends Controller
 
 
 
-        return redirect('/#spin');
+        return redirect('/#spin-location');
     }
 }

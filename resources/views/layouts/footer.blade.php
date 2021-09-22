@@ -1,5 +1,5 @@
 <!-- Footer section -->
-<footer class="footer-section">
+{{-- <footer class="footer-section">
     <div class="container">
         <div class="row spad">
             <div class="col-md-6 col-lg-3 footer-widget">
@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> --}}
 
 
 <!--====== Javascripts & Jquery ======-->
