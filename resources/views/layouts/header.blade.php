@@ -7,7 +7,6 @@
     <title>بیت بیست</title>
     <script src="js/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css?ver=1.0.1">
 
     <script src="js/icon.js" crossorigin="anonymous"></script>
 
@@ -15,6 +14,13 @@
 
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="css/style.css?ver=1.0.1">
 
     @yield('head')
 
@@ -32,7 +38,7 @@
 
     <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand logo" href="#"><img src="img/logo.svg" alt="bistbit"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
           <span class="fas fa-bars"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">

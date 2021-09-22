@@ -40,9 +40,7 @@ body{
     color: #fff;
     font-size: 20px;
 }
-.navbar-nav{
-    z-index: 2;
-}
+
 
 header{
     position: relative;
@@ -652,7 +650,7 @@ header .Caracter{
 @media screen and (max-width: 1000px) {
     header{
         top: 74px;
-        height: 500px;
+        height: 600px;
     }
     .part3 .Triangle{
         left: -42%;
@@ -682,7 +680,7 @@ header .Caracter{
 
 @media screen and (max-width: 700px) {
     header {
-        height: 350px;
+        height: 400px;
     }
 }
 
@@ -742,6 +740,16 @@ header .Caracter{
     header .text h3{
         font-weight: bolder;
     font-size: 9px;
+    }
+
+    header .text button {
+        border: 0;
+        font-family: Lalezar;
+        width: 50%;
+        height: 36px;
+        border-radius: 25px;
+        color: #091744;
+        font-weight: bolder;
     }
 }
 /* @media screen and (max-width: 950px) {
