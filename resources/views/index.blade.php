@@ -3,9 +3,11 @@
     صفحه اصلی
 @endsection
 
+
+
 @section('head')
 
-<style>
+
 
     .para1{
         animation: para1 5.2s ease-out forwards;
