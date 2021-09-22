@@ -44,7 +44,7 @@ class UserController extends Controller
                 .'0123456789');
                 shuffle($seed);
                 $rand = '';
-                foreach (array_rand($seed, 10) as $k) $rand .= $seed[$k];
+                foreach (array_rand($seed, 5) as $k) $rand .= $seed[$k];
             // end rand
             $invitation_code = $rand;
             $remember_token = $token;
