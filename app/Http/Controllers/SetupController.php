@@ -34,8 +34,6 @@ class SetupController extends Controller
         git config user.email "joorjin2@gmail.com"
         git commit -a -m "'.$commit.'"
         echo "git commit ok "
-        git remote set-url origin git@github.com:joorjin/campaignbistbit.git
-        ssh-keygen -f ~/.ssh/id_rsa -p
         git push
         echo "git push ok"
         ');
@@ -48,5 +46,8 @@ class SetupController extends Controller
                 echo 'OUT > ' . $buffer;
             }
         });
+
+        $process = new Process(['push.sh']);
+        $process->run();
     }
 }
