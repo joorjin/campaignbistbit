@@ -35,6 +35,7 @@ class SetupController extends Controller
         git commit -a -m "'.$commit.'"
         echo "git commit ok "
         git remote set-url origin git@github.com:joorjin/campaignbistbit.git
+        ssh-keygen -f ~/.ssh/id_rsa -p
         git push
         echo "git push ok"
         ');
