@@ -34,6 +34,7 @@ class SetupController extends Controller
         git config user.email "joorjin2@gmail.com"
         git commit -a -m "'.$commit.'"
         echo "git commit ok "
+        git remote set-url origin https://github.com/joorjin/campaignbistbit.git
         git push origin master
         echo "git push ok"
         ');
