@@ -1098,7 +1098,7 @@ header .CloudD{
 
 @media screen and (max-width: 700px) {
     header {
-        height: 400px;
+        height: 500px;
     }
 }
 
@@ -1148,7 +1148,7 @@ header .CloudD{
 }
 @media screen and (max-width: 400px) {
     header{
-        height: 228px;
+        height: 305px;
     }
     header .text{
         line-height: 250%;
