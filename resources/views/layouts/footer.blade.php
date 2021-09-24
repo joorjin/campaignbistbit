@@ -71,6 +71,58 @@
 
 
 <!--====== Javascripts & Jquery ======-->
+@isset($_GET['Old_user'])
+<script>
+    alert('نمی توانید دوباره حساب کاربری بسازید !');
+    window.location.href = "/";
+</script>
+@endisset
+
+@isset($_GET['inviteCode'])
+@if ($_GET['inviteCode'] == 0)
+<script>
+    alert('لینک دعوت اشتباه است !');
+    window.location.href = "/";
+</script>
+@endif
+@endisset
+
+@isset($_GET['inviteCode'])
+@if ($_GET['inviteCode'] == 1)
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("nologin");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+
+
+    // When the user clicks the button, open the modal
+
+
+    modal.style.display = "block";
+
+
+    // falseWhen the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+@endif
+@endisset
+
+
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>

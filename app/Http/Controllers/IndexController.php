@@ -32,8 +32,9 @@ class IndexController extends Controller
                     foreach ($award_wons as $item) {
                         $award_wonss[] = Awards::where('id',$item->awards_id)->select('name')->get();
                     }
+                }else {
+                    $award_wonss = 'new_login';
                 }
-                // dd($award_wonss);
 
                 if (Session::has('awrads'))
                 {

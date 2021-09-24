@@ -51,11 +51,11 @@ class QueueController extends Controller
         }
 
         // add next_spin
-        // User::
-        // where('id',$user->id)
-        // ->update([
-        //     "next_spin"=> Carbon::now()->addMinutes(10080)
-        // ]);
+        User::
+        where('id',$user->id)
+        ->update([
+            "next_spin"=> Carbon::now()->addMinutes(10080)
+        ]);
 
 
         $queue = Queue::get();

@@ -64,11 +64,12 @@
         <img src="img/01-h (3).png" alt="header" class="background">
         <!-- <img src="img/Stars.png" alt="star" class="star"> -->
         <img src="img/Caracter.png" alt="bistbit" class="Caracter">
+        <img src="img/Cloud-D.png" alt="bistbit" class="CloudD">
         <div class="text">
           <h3>جشنواره پاییزه صرافی بیست بیت</h3>
           <h2>بیست باش !</h2>
           <p>عضویت و احراز هویت:۵ =امتیاز</p>
-          <p>هر رفرال ثبت نام=۱امتیاز</p>
+          <p>هــر رفــرال ثـبـــت نـــام=۱امتیاز</p>
           <p>هر رفرال احراز هویت شده=۵امتیاز</p>
           <br>
           <a href="#spin-location"><button> شانستو امتحان کن </button></a>

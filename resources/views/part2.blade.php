@@ -10,15 +10,20 @@
           <br>
         <b>جوایز من</b>
         <p></p>
-        @foreach ($award_wonss as $item)
-            <p><?php echo($item[0]['name']); ?></p>
-        @endforeach
+        @if ($award_wonss == 'new_login')
+
+        @else
+            @foreach ($award_wonss as $item)
+                <p><?php echo($item[0]['name']); ?></p>
+            @endforeach
+        @endif
+
       </div>
 
       <div class="text3">
         <p>لینک دعوت شما :
           <br>
-          <b>https://20bash.bistbit.com/{{ $invitation_code }}</b></p>
+          <b>https://20bash.bistbit.com/invite/{{ $invitation_code }}</b></p>
       </div>
     </div>
   </div>
@@ -32,4 +37,3 @@
 
 
 
-  

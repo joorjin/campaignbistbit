@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\InvitedUsersController;
 use App\Http\Controllers\StartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -25,3 +26,6 @@ Route::any('/start_challenge', [StartController::class, 'start']);
 
 
 Route::any('/gitpull2903', [SetupController::class, 'setup']);
+
+// دعوت
+Route::any('/invite/{checkLink}', [InvitedUsersController::class, 'checkLink']);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\invited_users;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -57,6 +58,15 @@ class UserController extends Controller
             $user->invitation_code= $invitation_code;
             $user->remember_token=$remember_token;
             $user->save();
+
+            if (isset($_COOKIE['inviteCode'])) {
+                $inviteCode = $_COOKIE['inviteCode'];
+
+                $invitedUsers = new  invited_users;
+                $invitedUsers->caller_id = $inviteCode;
+                $invitedUsers->invited_id = $user['id'];
+                $invitedUsers->save();
+            }
             return redirect('/?register=1');
         }else{
 

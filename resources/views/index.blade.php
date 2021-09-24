@@ -66,7 +66,6 @@
 }
 .register button{
     width: 100px;
-    left: calc(50% - 50px);
     position: relative;
     margin-top: 20px;
 }
@@ -226,7 +225,9 @@
                var span = document.getElementsByClassName("close")[0];
 
 
+
                // When the user clicks the button, open the modal
+
                btn.onclick = function() {
                modal.style.display = "block";
                }
@@ -243,6 +244,9 @@
                }
            }
    </script>
+
+
+
 
    @endif
 
