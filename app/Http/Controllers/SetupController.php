@@ -25,4 +25,25 @@ class SetupController extends Controller
             }
         });
     }
+
+    public function push(){
+        $commit = now();
+        $process = Process::fromShellCommandline('
+        cd ..
+        git config user.name "joorjin"
+        git config user.email "joorjin2@gmail.com"
+        git commit -a -m "'.$commit.'"
+        echo "git commit ok "
+
+        ');
+
+
+        $process->run(function ($type, $buffer) {
+            if (Process::ERR === $type) {
+                echo 'ERR > ' . $buffer;
+            } else {
+                echo 'OUT > ' . $buffer;
+            }
+        });
+    }
 }
