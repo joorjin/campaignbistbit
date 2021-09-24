@@ -1064,10 +1064,11 @@ header .CloudD{
     }
 
     header .text{
-        line-height: 154%;
+        line-height: 29px;
         width: 40%;
         font-size: 12px;
     }
+
     header .text h2{
         font-weight: bolder;
         font-size: 30px;
@@ -1075,6 +1076,10 @@ header .CloudD{
     header .text h3{
         font-weight: bolder;
     font-size: 14px;
+    }
+
+    header .text button {
+        width: 47%;
     }
 
     .part5{
@@ -1106,7 +1111,7 @@ header .CloudD{
         height: 350px;
     }
     header .text{
-        line-height: 124%;
+        line-height: 26px;
         width: 40%;
         font-size: 8px;
     }
