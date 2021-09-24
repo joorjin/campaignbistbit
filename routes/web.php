@@ -25,7 +25,6 @@ Route::view('/start', 'start');
 Route::any('/start_challenge', [StartController::class, 'start']);
 
 
-Route::any('/gitpush2903', [SetupController::class, 'push']);
 Route::any('/gitpull2903', [SetupController::class, 'setup']);
 
 // دعوت

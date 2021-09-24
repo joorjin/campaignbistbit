@@ -720,7 +720,7 @@ header .CloudD{
 
 
     .part2 {
-        height: 200px;
+        height: 181px;
         margin-bottom: 162px;
     }
 
@@ -736,17 +736,17 @@ header .CloudD{
     }
 
     .part2 .text2{
-        font-size: 10px;
+        font-size: 9px;
         line-height: 13px;
         font-weight: bolder;
-        height: 150px;
+        height: 133px;
     }
 
     .part2 .text2 b{
         font-size: 7px  ;
     }
     .part2 .text3{
-        font-size: 9px;
+        font-size: 8px;
         line-height: 15px;
     }
 
@@ -786,8 +786,8 @@ header .CloudD{
     }
 
     .part2 .text2{
-        font-size: 15px;
-        line-height: 3px;
+        font-size: 12px;
+        line-height: 12px;
         height: 150px;
     }
 
@@ -796,7 +796,7 @@ header .CloudD{
         font-size: 10px;
     }
     .part2 .text3{
-        font-size: 12px;
+        font-size: 10px;
         line-height: 15px;
     }
 
@@ -818,16 +818,16 @@ header .CloudD{
 
     .part2 .text2{
         font-size: 18px;
-        line-height: 7px;
+        line-height: 17px;
         height: 200px;
     }
 
     .part2 .text2 b{
         line-height: 30px;
-        font-size: 17px;
+        font-size: 15px;
     }
     .part2 .text3{
-        font-size: 15px;
+        font-size: 13px;
         line-height: 15px;
     }
 }
@@ -845,12 +845,12 @@ header .CloudD{
 
     .part2 .text1{
         font-size: 25px;
-        line-height: 10px;
+        line-height: 49px;
     }
 
     .part2 .text2{
         font-size: 20px;
-        line-height: 7px;
+        line-height: 16px;
         height: 250px;
     }
 
@@ -877,12 +877,12 @@ header .CloudD{
 
     .part2 .text1{
         font-size: 25px;
-        line-height: 10px;
+        line-height: 46px;
     }
 
     .part2 .text2{
         font-size: 24px;
-        line-height: 15px;
+        line-height: 20px;
         height: 290px;
     }
 
@@ -892,7 +892,7 @@ header .CloudD{
         font-size: 17px;
     }
     .part2 .text3{
-        font-size: 21px;
+        font-size: 19px;
         line-height: 22px;
     }
 }
@@ -943,6 +943,7 @@ header .CloudD{
         top: -369px;
         color: #fff;
         font-size: 23px;
+        line-height: 40px;
         width: 52%;
         position: relative;
         text-align: center;
@@ -975,7 +976,8 @@ header .CloudD{
 
 @media screen and (min-width: 1250px) {
     .part2 {
-        height: 450px;
+        height: 550px;
+        margin-bottom: 211px;
     }
 
     .part2 .caracter {
@@ -1040,6 +1042,19 @@ header .CloudD{
     .part3 .Triangle{
         left: -42%;
     }
+
+    .part5{
+        height: 600px;
+    }
+    .part5 .text{
+        top: 250px;
+        right: 12%;
+    }
+    .part5 .logo{
+        width: 70%;
+        right: 20%;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -1061,6 +1076,19 @@ header .CloudD{
         font-weight: bolder;
     font-size: 14px;
     }
+
+    .part5{
+        height: 700px;
+    }
+    .part5 .text{
+        top: 200px;
+        right: 15%;
+    }
+    .part5 .logo{
+        width: 70%;
+        right: 20%;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -1108,6 +1136,10 @@ header .CloudD{
         right: calc(50% - 100px);
     }
 
+    .part5 .text{
+        top: 150px;
+    }
+
 }
 @media screen and (max-width: 400px) {
     header{
@@ -1136,6 +1168,10 @@ header .CloudD{
         border-radius: 25px;
         color: #091744;
         font-weight: bolder;
+    }
+
+    .part5 .text{
+        top: 100px;
     }
 }
 /* @media screen and (max-width: 950px) {
