@@ -21,6 +21,11 @@
 
 
     <div class="spin-loc">
+        <div class="startbox">
+            <i class="fas fa-star"></i>
+            <br>
+            <button id="becharck">  بچرخانید</button>
+          </div>
       <div class="Triangle"></div>
  <!-- Hero section -->
  <section class="spin-section">

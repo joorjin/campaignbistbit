@@ -123,7 +123,11 @@
     </div>
 
     <div class="part7">
+        <p>توجه داشته باشید برای دریافت جوایز خود ، حتما میبایست در صرافی بیست بیت ثبت نام و احراز هویت  نمایید.</p>
+    </div>
 
+    <div class="part8">
+        <p>تمامی حقوق برای صرافی بیست بیت محفوظ است. <i class="fa fa-copyright"></i></p>
     </div>
 
 
@@ -221,6 +225,8 @@
                // Get the button that opens the modal
                var btn = document.getElementById("nologin");
 
+               var becharck = document.getElementById("becharck");
+
                // Get the <span> element that closes the modal
                var span = document.getElementsByClassName("close")[0];
 
@@ -229,6 +235,10 @@
                // When the user clicks the button, open the modal
 
                btn.onclick = function() {
+               modal.style.display = "block";
+               }
+
+               becharck.onclick = function() {
                modal.style.display = "block";
                }
 
