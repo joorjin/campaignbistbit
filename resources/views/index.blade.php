@@ -132,6 +132,19 @@
 
 
 
+    <script>
+        $(document).ready(function () {
+            for (let index = 0; index < 20; index++) {
+                $(".Caracter").animate({marginTop:'-20%'},1500);
+                $(".Caracter").animate({marginTop:'-25%'},1500);
+
+                $(".CloudD").animate({marginTop:'-14%'},1500);
+                $(".CloudD").animate({marginTop:'-10%'},1500);
+            }
+        });
+    </script>
+
+
 
      <script>
 

@@ -427,6 +427,10 @@ header .background{
     z-index: 1;
     margin-top: -100px;
 }
+header .star{
+    width: 20px;
+    height: 20px;
+}
 header .text{
     line-height: 259%;
     width: 40%;
@@ -466,7 +470,7 @@ font-size: 20px;
 header .Caracter{
     margin-top: -23%;
     margin-left: -43%;
-    width: 16%;
+    width: 13%;
 }
 
 header .CloudD{
@@ -735,6 +739,7 @@ header .CloudD{
     height: 20px;
     background: #fcdd39;
     color: #0008ff;
+    text-align: center;
 }
 
 
@@ -870,6 +875,11 @@ header .CloudD{
 }
 
 @media screen and (min-width: 700px) {
+
+    header .Caracter{
+        width: 12%;
+    }
+
     .part2 {
         height: 300px;
     }
@@ -877,7 +887,7 @@ header .CloudD{
     .part2 .caracter {
         margin-top: -147px;
         margin-left: 70%;
-        width: 16%;
+        width: 14%;
     }
 
     .part2 .text1{

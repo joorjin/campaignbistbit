@@ -65,6 +65,8 @@
         <!-- <img src="img/Stars.png" alt="star" class="star"> -->
         <img src="img/Caracter.png" alt="bistbit" class="Caracter">
         <img src="img/Cloud-D.png" alt="bistbit" class="CloudD">
+        {{-- <img src="/img/star" alt="" class="star star1">
+        <img src="/img/star" alt="" class="star star2"> --}}
         <div class="text">
           <h3>جشنواره پاییزه صرافی بیست بیت</h3>
           <h2>بیست باش !</h2>

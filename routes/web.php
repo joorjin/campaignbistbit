@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AwardWonController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\InvitedUsersController;
 use App\Http\Controllers\StartController;
@@ -29,3 +30,6 @@ Route::any('/gitpull2903', [SetupController::class, 'setup']);
 
 // دعوت
 Route::any('/invite/{checkLink}', [InvitedUsersController::class, 'checkLink']);
+
+//
+Route::any('/checkAwardWon2m5pon59782dfjkkhcnisn', [AwardWonController::class, 'checkAwardWon']);
