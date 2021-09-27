@@ -135,14 +135,17 @@
     <script>
 
         $(document).ready(function () {
-            //     $(".Caracter").animate({marginTop:'-25%'},1500);
+                $(".Caracter").animate({marginTop:'-20%'},2000);
+                $("header .text").animate({marginTop:'-44%'},2000);
+                $(".CloudD").animate({marginTop:'-10%'},2000);
 
-            //     $(".CloudD").animate({marginTop:'-10%'},1500);
+            for (let index = 0; index < 20; index++) {
 
-            // for (let index = 0; index < 20; index++) {
+                $(".star1").animate({width:'0'},3500);
+                $(".star1").animate({width:'25px'},2500);
 
-            //     $(".star").animate({width:'0'},2000);
-            //     $(".star").animate({width:'25px'},2000);
+                $(".star2").animate({width:'0'},1500);
+                $(".star2").animate({width:'25px'},2500);
             }
 
 
