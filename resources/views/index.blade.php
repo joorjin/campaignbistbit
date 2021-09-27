@@ -133,15 +133,20 @@
 
 
     <script>
-        $(document).ready(function () {
-            for (let index = 0; index < 20; index++) {
-                $(".Caracter").animate({marginTop:'-20%'},1500);
-                $(".Caracter").animate({marginTop:'-25%'},1500);
 
-                $(".CloudD").animate({marginTop:'-14%'},1500);
-                $(".CloudD").animate({marginTop:'-10%'},1500);
+        $(document).ready(function () {
+            //     $(".Caracter").animate({marginTop:'-25%'},1500);
+
+            //     $(".CloudD").animate({marginTop:'-10%'},1500);
+
+            // for (let index = 0; index < 20; index++) {
+
+            //     $(".star").animate({width:'0'},2000);
+            //     $(".star").animate({width:'25px'},2000);
             }
-        });
+
+
+            });
     </script>
 
 

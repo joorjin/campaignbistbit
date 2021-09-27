@@ -404,9 +404,7 @@ body{
     z-index: 2;
 }
 
-.logo{
-    width: 140px;
-}
+
 .navbar .navbar-toggler{
     border: 1px solid #fff;
 }
@@ -425,11 +423,26 @@ header .background{
     width: 100%;
     height: auto;
     z-index: 1;
-    margin-top: -100px;
+}
+header .startbox{
+    position: relative;
+    display: block;
+    width: 100%;
+    left: 0;
+    top: 0%;
 }
 header .star{
     width: 20px;
-    height: 20px;
+}
+header .star1{
+    position: absolute;
+    left: 67%;
+    top: 40%;
+}
+header .star2{
+    position: absolute;
+    left: 63%;
+    top: 200px;
 }
 header .text{
     line-height: 259%;
@@ -438,8 +451,12 @@ header .text{
     text-align: center;
     color: #fff;
     font-weight: bolder;
-    margin-top: -38%;
+    margin-top: -44%;
     font-size: 120%;
+}
+header .text img{
+    width: 40%;
+    margin-right: 10%;
 }
  header .text button{
     border: 0;
@@ -1068,7 +1085,7 @@ header .CloudD{
         text-align: center;
         color: #fff;
         font-weight: bolder;
-        margin-top: -38%;
+        margin-top: -46%;
         font-size: 14px;
     }
     header .text h2{
@@ -1083,10 +1100,11 @@ header .CloudD{
 
 @media screen and (max-width: 1000px) {
     header{
-        top: 94px;
         height: 600px;
     }
-
+    header .startbox{
+        top: -20%;
+    }
 
     .startbox{
         position: relative;
@@ -1170,7 +1188,7 @@ header .CloudD{
         height: 350px;
     }
     header .text{
-        line-height: 26px;
+        line-height: 21px;
         width: 40%;
         font-size: 8px;
     }
@@ -1183,6 +1201,9 @@ header .CloudD{
     font-size: 11px;
     }
 
+    header .startbox{
+        top: -30%;
+    }
 
 
     .startbox{
@@ -1226,7 +1247,7 @@ header .CloudD{
         line-height: 250%;
         width: 40%;
         font-size: 7px;
-        margin-top: -151px;
+        margin-top: -51%;
     }
     header .text h2{
         font-weight: bolder;

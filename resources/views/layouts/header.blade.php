@@ -7,12 +7,12 @@
     <title>بیت بیست</title>
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css?ver=1.0.8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css?ver=1.0.0" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css?ver=1.0.9">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js?ver=1.0.0" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js?ver=1.0.0" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js?ver=1.0.0" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/icon.js" crossorigin="anonymous"></script>
     <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16"><p></p>
     @yield('head')
@@ -30,7 +30,6 @@
 
 
     <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand logo" href="#"><img src="img/logo.svg" alt="bistbit"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
           <span class="fas fa-bars"></span>
         </button>
@@ -65,9 +64,8 @@
         <!-- <img src="img/Stars.png" alt="star" class="star"> -->
         <img src="img/Caracter.png" alt="bistbit" class="Caracter">
         <img src="img/Cloud-D.png" alt="bistbit" class="CloudD">
-        {{-- <img src="/img/star" alt="" class="star star1">
-        <img src="/img/star" alt="" class="star star2"> --}}
         <div class="text">
+            <img src="img/logo.svg" alt="">
           <h3>جشنواره پاییزه صرافی بیست بیت</h3>
           <h2>بیست باش !</h2>
           <p>عضویت و احراز هویت:۵ =امتیاز</p>
@@ -76,4 +74,8 @@
           <br>
           <a href="#spin-location"><button> شانستو امتحان کن </button></a>
         </div>
+        {{-- <div class="startbox">
+            <img src="/img/star" alt="" class="star star1">
+            <img src="/img/star" alt="" class="star star2">
+        </div> --}}
     </header>
