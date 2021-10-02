@@ -40,29 +40,23 @@ class IndexController extends Controller
                     $award_wonss = 'new_login';
                 }
 
+                $invited_users=invited_users::
+                where('caller_id',$user[0]['id'])
+                ->count();
+
+
                 if (Session::has('awrads'))
                 {
                     $awrads = session('awrads');
                     $reques->session()->forget('awrads');
-                    return view('index',compact('login','awrads'));
+                    return view('index',compact('login','awrads','award_wonss','invitation_code','invited_users','permitted_act'));
                 }
 
-                $invited_users=invited_users::
-                where('caller_id',$user[0]['id'])
-                ->count();
 
                 return view('index',compact('login','award_wonss','invitation_code','invited_users','permitted_act'));
             }
         }
 
-        if (Session::has('awrads'))
-        {
-            $awrads = session('awrads');
-            $reques->session()->forget('awrads');
-            return view('index',compact('login','awrads'));
-
-            return view('index',compact('login','awrads'));
-        }
 
 
 

@@ -27,6 +27,8 @@
           <b>تعداد نفرات دعوت شده:{{ $invited_users }}</b>
           <br>
           <b>تعداد شانس های مانده: {{ $permitted_act }}</b>
+          <br>
+          <b></b>
       </div>
     </div>
   </div>

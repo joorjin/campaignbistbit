@@ -16,6 +16,8 @@ class QueueController extends Controller
 {
     public function checkLicense(Request $request)
     {
+
+
         if (!isset($_COOKIE['token'])) {
             return redirect('/?login=falss');
         }
@@ -27,12 +29,20 @@ class QueueController extends Controller
             return redirect('/?login=falss');
         }
 
-        foreach ($user as $item) {
-            if ($item->next_spin <= Carbon::now()) {
-                return redirect('selectAward');
-            }else {
-                return redirect('/?spin_permission=0');
+        $permitted_act = $user[0]['permitted_act'];
+
+        if ($permitted_act == 0) {
+
+            foreach ($user as $item) {
+                if ($item->next_spin <= Carbon::now()) {
+                    return redirect('selectAward');
+                }else {
+                    return redirect('/?spin_permission=0');
+                }
             }
+        }
+        else {
+            return redirect('selectAward');
         }
     }
 
@@ -68,6 +78,16 @@ class QueueController extends Controller
 
 
         $queue = Queue::get();
+
+        if ($queue->count() <= 2) {
+            $queues = new Queue();
+            $queues->award_id = 13;
+            $queues->save();
+
+            $queues = new Queue();
+            $queues->award_id = 14;
+            $queues->save();
+        }
         $award_id = $queue[0]->award_id;
         $queue_id=  $queue[0]->id;
 
