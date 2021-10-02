@@ -138,14 +138,17 @@
                 $(".Caracter").animate({marginTop:'-20%'},2000);
                 $("header .text").animate({marginTop:'-44%'},2000);
                 $(".CloudD").animate({marginTop:'-10%'},2000);
+                $(".CloudDa").animate({left:'90%'},2000);
 
-            for (let index = 0; index < 20; index++) {
+            for (let index = 0; index < 100; index++) {
 
                 $(".star1").animate({width:'0'},3500);
                 $(".star1").animate({width:'25px'},2500);
 
                 $(".star2").animate({width:'0'},1500);
                 $(".star2").animate({width:'25px'},2500);
+
+
             }
 
 

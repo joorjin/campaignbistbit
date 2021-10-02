@@ -50,12 +50,21 @@ class QueueController extends Controller
             return redirect('/?login=falss');
         }
 
-        // add next_spin
+        $permitted_act = $user['permitted_act'];
+        if ($permitted_act == 0) {
+         // add next_spin
         User::
         where('id',$user->id)
         ->update([
             "next_spin"=> Carbon::now()->addMinutes(10080)
         ]);
+        }else {
+            User::
+            where('id',$user->id)
+            ->update([
+                "permitted_act"=> $permitted_act - 1
+            ]);
+        }
 
 
         $queue = Queue::get();

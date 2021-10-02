@@ -59,6 +59,7 @@ class UserController extends Controller
             $user->remember_token=$remember_token;
             $user->save();
 
+            // دعوت شده
             if (isset($_COOKIE['inviteCode'])) {
                 $inviteCode = $_COOKIE['inviteCode'];
 
@@ -66,6 +67,17 @@ class UserController extends Controller
                 $invitedUsers->caller_id = $inviteCode;
                 $invitedUsers->invited_id = $user['id'];
                 $invitedUsers->save();
+
+                $user_inviter = User::
+                where('id',$_COOKIE['inviteCode'])
+                ->get();
+                // تغیر زمان گرداندن گردونه
+                User::
+                where('id',$_COOKIE['inviteCode'])
+                ->update([
+                    "next_spin"=> now(),
+                    "permitted_act"=>$user_inviter[0]['permitted_act'] + 1
+                ]);
             }
             return redirect('/?register=1');
         }else{

@@ -164,8 +164,8 @@ class StartController extends Controller
             $start->name = '-0/02 % تخفیف';
             $start->delivery_in_time = 540;
             $start->time_open=Carbon::now();
-            $start->number = 100;
-            $start->number_left= 100;
+            $start->number = 10000;
+            $start->number_left= 10000;
             $start->type = 'discount';
             $start->save();
 
@@ -174,8 +174,8 @@ class StartController extends Controller
             $start->name = '-0/03 % تخفیف';
             $start->delivery_in_time = 2760;
             $start->time_open=Carbon::now();
-            $start->number = 50;
-            $start->number_left= 50;
+            $start->number = 5000;
+            $start->number_left= 5000;
             $start->type = 'discount';
             $start->save();
 
