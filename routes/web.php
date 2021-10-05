@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\QueueController;
 use App\Http\Controllers\SetupController;
+use Illuminate\Support\Facades\Artisan;
 
 Route::any('/', [IndexController::class , 'index']);
 
@@ -33,3 +34,8 @@ Route::any('/invite/{checkLink}', [InvitedUsersController::class, 'checkLink']);
 
 //
 Route::any('/checkAwardWon2m5pon59782dfjkkhcnisn', [AwardWonController::class, 'checkAwardWon']);
+
+Route::get('/clear-cache', function() {
+    Artisan::call('route:cache');
+    return "Cache is cleared";
+});
