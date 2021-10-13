@@ -1,5 +1,5 @@
 <div class="part2">
-    <img class="backgruond" src="img/02-h-02.png?ver=2" alt="">
+    <img class="backgruond" src="img/02-h-022.png" alt="">
     <img class="caracter" src="img/Caracter-miror.png" alt="">
 
     <div class="texts">
