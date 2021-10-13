@@ -1,10 +1,10 @@
 <div class="part2">
-    <img class="backgruond" src="img/02-h-02.png" alt="">
+    <img class="backgruond" src="img/02-h-02.png?ver=2" alt="">
     <img class="caracter" src="img/Caracter-miror.png" alt="">
 
     <div class="texts">
       <div class="text1">
-        <p>{{ $phone }}</p> 
+        <p>{{ $phone }}</p>
         <p>امتیاز شما :25</p>
       </div>
       <div class="text2">
