@@ -103,10 +103,10 @@
       <img class="img1" src="img/c1.png" alt="">
       <!-- <div class="text1">تویتر بیت بیست <br>را دنبال کنید</div>
       <div class="text11">کلیک کنید</div> -->
-      <img class="img2" src="img/c2.png" alt="">
-      <img class="img3" src="img/c3.png" alt="">
-      <img class="img4" src="img/c4.png" alt="">
-      <img class="img5" src="img/c5.png" alt="">
+      <img class="img2" src="img/c2.png?ver=2" alt="">
+      <img class="img3" src="img/c3.png?ver=2" alt="">
+      <img class="img4" src="img/c4.png?ver=2" alt="">
+      <img class="img5" src="img/c5.png?ver=2" alt="">
     </div>
 
     <div class="part5">
