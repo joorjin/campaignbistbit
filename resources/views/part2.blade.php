@@ -4,6 +4,7 @@
 
     <div class="texts">
       <div class="text1">
+        <p>{{ $phone }}</p> 
         <p>امتیاز شما :25</p>
       </div>
       <div class="text2">

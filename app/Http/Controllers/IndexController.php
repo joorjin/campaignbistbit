@@ -31,6 +31,9 @@ class IndexController extends Controller
 
                 $permitted_act = $user[0]['permitted_act'];
 
+
+                $phone = $user[0]['phone'];
+
                 $award_wons = Award_won::where('user_id',$user[0]['id'])->get();
                 if ($award_wons->count() != 0) {
                     foreach ($award_wons as $item) {
@@ -49,11 +52,11 @@ class IndexController extends Controller
                 {
                     $awrads = session('awrads');
                     $reques->session()->forget('awrads');
-                    return view('index',compact('login','awrads','award_wonss','invitation_code','invited_users','permitted_act'));
+                    return view('index',compact('login','awrads','phone','award_wonss','invitation_code','invited_users','permitted_act'));
                 }
 
 
-                return view('index',compact('login','award_wonss','invitation_code','invited_users','permitted_act'));
+                return view('index',compact('login','award_wonss','phone','invitation_code','invited_users','permitted_act'));
             }
         }
 
