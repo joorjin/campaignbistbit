@@ -412,6 +412,7 @@ body{
 
 .navbar .navbar-toggler{
     border: 1px solid #fff;
+    z-index: 2;
 }
 .navbar .navbar-toggler span{
     color: #fff;
