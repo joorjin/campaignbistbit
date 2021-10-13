@@ -140,25 +140,25 @@
                 $(".CloudD").animate({marginTop:'-10%'},2);
                 $(".CloudDa").animate({left:'90%'},2);
 
-                // if (window.matchMedia('(max-width: 767px)').matches) {
-                //     for (let index = 0; index < 100; index++) {
+                if (window.matchMedia('(max-width: 767px)').matches) {
+                    for (let index = 0; index < 100; index++) {
 
-                //         $(".star1").animate({width:'0'},2500);
-                //         $(".star1").animate({width:'10px'},2500);
+                        $(".star1").animate({width:'0'},2500);
+                        $(".star1").animate({width:'10px'},2500);
 
-                //         $(".star2").animate({width:'0'},1500);
-                //         $(".star2").animate({width:'10px'},2500);
-                //     }
-                // } else {
-                //     for (let index = 0; index < 100; index++) {
+                        $(".star2").animate({width:'0'},1500);
+                        $(".star2").animate({width:'10px'},2500);
+                    }
+                } else {
+                    for (let index = 0; index < 100; index++) {
 
-                //         $(".star1").animate({width:'0'},3500);
-                //         $(".star1").animate({width:'25px'},2500);
+                        $(".star1").animate({width:'0'},3500);
+                        $(".star1").animate({width:'25px'},2500);
 
-                //         $(".star2").animate({width:'0'},1500);
-                //         $(".star2").animate({width:'25px'},2500);
-                //     }
-                // }
+                        $(".star2").animate({width:'0'},1500);
+                        $(".star2").animate({width:'25px'},2500);
+                    }
+                }
 
 
 
