@@ -1373,11 +1373,11 @@ header{
     }
 
     header .startbox{
-        top: -69%;
+        top: -52%;
     }
     header .star1 {
-        top: 100%;
-        left: 67%;
+        top: 174%;
+        left: 60%;
     }
 
 
@@ -1425,7 +1425,7 @@ header{
     }
 
     header .startbox{
-        top: -80%;
+        top: -62%;
     }
 }
 /* @media screen and (max-width: 950px) {
