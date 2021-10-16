@@ -136,10 +136,10 @@
 
         $(document).ready(function () {
 
-            // setTimeout(() => {
-            //     $(".Caracter").css('display', 'inline');
-            //     $(".Caracter").animate({marginTop:'-20%'},2000);
-            // }, 1000);
+            setTimeout(() => {
+                $(".Caracter").css('display', 'inline');
+                $(".Caracter").animate({marginTop:'-20%'},2000);
+            }, 1000);
                 $(".Caracter").animate({marginTop:'-20%'},2000);
                 $("header .text").animate({marginTop:'-44%'},2000);
                 $(".CloudD").animate({marginTop:'-10%'},2);
