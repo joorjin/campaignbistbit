@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css?ver=1.0.0" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     {{-- <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css?ver=1"> --}}
-    <link rel="stylesheet" href="css/style.css?ver=1.2.1">
+    <link rel="stylesheet" href="css/style.css?ver=1.2.2">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js?ver=1.0.0" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js?ver=1.0.0" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -37,19 +37,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">صفحه اصلی <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">صفحه اصلی <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">گردونه</a>
+              <a class="nav-link" href="#spin-location">گردونه</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#">اخبار</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#">درباره ما</a>
+              <a class="nav-link" href="#part5">درباره ما</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">تماس با ما</a>
+                <a class="nav-link" href="https://bistbit.com/index/contact">تماس با ما</a>
               </li>
           </ul>
         </div>
