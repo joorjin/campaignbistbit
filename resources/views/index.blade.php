@@ -136,8 +136,6 @@
 
         $(document).ready(function () {
 
-                $(".Caracter").css('display', 'inline');
-                $(".background").css('display', 'inline');
                 $(".Caracter").animate({marginTop:'-20%'},2000);
                 $(".Caracter").animate({marginTop:'-20%'},2000);
                 $("header .text").animate({marginTop:'-44%'},2000);
