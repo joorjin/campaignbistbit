@@ -135,6 +135,8 @@
     <script>
 
         $(document).ready(function () {
+
+            setTimeout(() => {
                 $(".Caracter").animate({marginTop:'-20%'},2000);
                 $("header .text").animate({marginTop:'-44%'},2000);
                 $(".CloudD").animate({marginTop:'-10%'},2);
@@ -159,6 +161,7 @@
                         $(".star2").animate({width:'25px'},2500);
                     }
                 }
+            }, 1000);
 
 
 
