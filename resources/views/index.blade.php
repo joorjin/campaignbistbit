@@ -138,6 +138,7 @@
 
             setTimeout(() => {
                 $(".Caracter").css('display', 'inline');
+                $(".Caracter").css('display', 'inline');
                 $(".Caracter").animate({marginTop:'-20%'},2000);
             }, 1000);
                 $(".Caracter").animate({marginTop:'-20%'},2000);
