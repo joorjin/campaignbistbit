@@ -499,9 +499,8 @@ font-size: 20px;
 
 header .Caracter{
     margin-top: -10%;
-    margin-left: -39%;
+    left: -39%;
     width: 13%;
-    display: none; 
 }
 
 header .CloudD{
