@@ -442,7 +442,6 @@ header .startbox{
     width: 98%;
     left: 0;
     top: -9%;
-    display: none;
 }
 header .star{
     width: 20px;
@@ -502,6 +501,7 @@ header .Caracter{
     margin-top: -10%;
     margin-left: -39%;
     width: 13%;
+    display: none;
 }
 
 header .CloudD{
