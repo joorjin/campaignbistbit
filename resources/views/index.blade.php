@@ -139,7 +139,7 @@
             setTimeout(() => {
                 $(".Caracter").animate({marginTop:'-20%'},2000);
                 $(".Caracter").css('display', 'inline');
-            }, timeout);
+            }, 500);
                 $(".Caracter").animate({marginTop:'-20%'},2000);
                 $("header .text").animate({marginTop:'-44%'},2000);
                 $(".CloudD").animate({marginTop:'-10%'},2);
