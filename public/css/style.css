@@ -473,7 +473,7 @@ header .text img{
 }
  header .text button{
     border: 0;
-    font-family: Lalezar;
+    font-family: 'Yekan';
     width: 43%;
     height: 36px;
     border-radius: 25px;
@@ -483,11 +483,11 @@ header .text img{
 header .text h2{
     font-weight: bolder;
     font-size: 70px;
-    font-family: Lalezar;
+    font-family: 'Yekan';
 }
 header .text h3{
     font-weight: bolder;
-font-size: 20px;
+font-size: 25px;
 }
 /* header .star{
     position: relative;
@@ -602,7 +602,7 @@ header .CloudD{
     margin-bottom: 160px;
 }
 .part3 .text{
-    font-family: Lalezar;
+    font-family: Yekan;
     right: 2%;
     top: -369px;
     color: #fff;
@@ -610,11 +610,14 @@ header .CloudD{
     width: 94%;
     position: relative;
     text-align: center;
+    font-weight: bolder;
+    line-height: 30px;
 }
 .part3 .text h2{
     font-size: 65px;
     font-weight: bolder;
     width: 100%;
+    font-family: 'Yekan';
 }
 
 .part3 .spin-loc{
@@ -661,7 +664,8 @@ header .CloudD{
     color: #fff;
 }
 .startbox button{
-    font-family: Sans;
+    font-family: 'Yekan'0;
+    font-weight: bolder;
     border: 0;
     background: #fcdd39;
     width: 100%;
@@ -686,7 +690,7 @@ header .CloudD{
     margin-right: 9%;
     font-weight: bolder;
     color: #fff;
-    font-family: Lalezar;
+    font-family: Yekan;
     text-align: center;
 }
 .part4 .text11{
@@ -736,6 +740,7 @@ header .CloudD{
 }
 
 .part5 .text{
+    font-weight: bolder;
     width: 75%;
     right: 20%;
     line-height: 35px;
@@ -743,7 +748,7 @@ header .CloudD{
     color: #fff;
     text-align: right;
     top: -50px;
-    font-family: Lalezar;
+    font-family: Yekan;
 }
 .part5 .logo{
     width: 15%;
@@ -780,6 +785,7 @@ header .CloudD{
     background: #fcdd39;
     color: #0008ff;
     text-align: center;
+    font-family: Yekan;
     padding-top: 3px;
 }
 
@@ -1037,7 +1043,9 @@ header{
         line-height: 40px;
         width: 52%;
         position: relative;
-        text-align: center;
+        text-align: right;
+        margin-right: 156px;
+        font-weight: bolder;
     }
 
     .part2 .text1{
@@ -1201,7 +1209,7 @@ header{
     }
     header .text h3{
         font-weight: bolder;
-    font-size: 14px;
+    font-size: 18px;
     }
     header .startbox {
         left: 0;
@@ -1267,7 +1275,7 @@ header{
     }
     header .text h3{
         font-weight: bolder;
-        font-size: 12px;
+        font-size: 15px;
     }
 
     header .text button {
@@ -1323,11 +1331,11 @@ header{
 
     header .text h2{
         font-weight: bolder;
-        font-size: 35px;
+        font-size: 31px;
     }
     header .text h3{
         font-weight: bolder;
-        font-size: 10px;
+        font-size: 11px;
     }
 }
 
