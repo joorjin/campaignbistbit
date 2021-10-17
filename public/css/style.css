@@ -604,7 +604,7 @@ header .CloudD{
 .part3 .text{
     font-family: Yekan;
     right: 2%;
-    top: -369px;
+    top: -440px;
     color: #fff;
     font-size: 23px;
     width: 94%;
@@ -641,7 +641,7 @@ header .CloudD{
     height: 1px;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #f00;
+    border-top: 20px solid #ffffff;
     left: -75px;
     position: relative;
 }
@@ -1086,6 +1086,10 @@ header{
     .part3 .spinImg {
         width: 600px;
     }
+    .part3 .Triangle {
+        left: -121%;
+        top: -266px;
+    }
 
     .startbox button {
         border: 0;
@@ -1140,6 +1144,10 @@ header{
     .part2 .text3{
         font-size: 27px;
         line-height: 30px;
+    }
+
+    .part3 .text{
+        margin-right: 220px;
     }
 
 }
