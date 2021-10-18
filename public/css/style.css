@@ -1445,6 +1445,10 @@ header{
     header .startbox{
         top: -62%;
     }
+
+    .part5{
+        height: 780px;
+    }
 }
 /* @media screen and (max-width: 950px) {
     .part3{
