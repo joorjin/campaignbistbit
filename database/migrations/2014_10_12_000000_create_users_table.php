@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             // $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('permitted_act')->default(0);
-            $table->string('social_networks')->default('00');
+            $table->string('social_networks')->default('0000');
             $table->timestamp('next_spin')->nullable();
             $table->string('invitation_code');
             $table->rememberToken()->nullable();

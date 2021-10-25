@@ -19,11 +19,23 @@
             <b>{{ $item->name }}</b>
             <br>
             @if ($item->status == 1)
-                <b>هنوز اهدا نشده</b>
+                <b style="color: #04ff00">هنوز اهدا نشده</b>
+                <button onclick="window.location.href='del2m5pon59782dfjkk?phone=<?php echo $item->phone; ?>&id=<?php echo $item->id; ?>'">اهدا شد</button>
+            @endif
+
+            @if ($item->status == 0)
+            <b style="color: #f00;">اهدا شده</b>
             @endif
 
             <hr>
         @endforeach
     @endisset
+
+
+    @isset($del)
+    <script>
+        alert('به حالت اهدا شده تغییر کرد');
+    </script>
+@endisset
 </body>
 </html>

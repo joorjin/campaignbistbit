@@ -16,6 +16,8 @@ Route::any('/add_phone', [UserController::class, 'add_phone']);
 
 Route::any('/go_phone', [UserController::class, 'add_phone']);
 
+Route::any('/link',[UserController::class, 'link']);
+
 
 
 //  انتخواب جایزه
@@ -34,6 +36,8 @@ Route::any('/invite/{checkLink}', [InvitedUsersController::class, 'checkLink']);
 
 //
 Route::any('/checkAwardWon2m5pon59782dfjkkhcnisn', [AwardWonController::class, 'checkAwardWon']);
+Route::any('/del2m5pon59782dfjkk', [AwardWonController::class, 'del']);
+
 
 Route::get('/clear-cache', function() {
     Artisan::call('route:cache');

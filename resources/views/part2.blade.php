@@ -24,7 +24,8 @@
       <div class="text3">
         <p>لینک دعوت شما :
           <br>
-          <b>https://20bash.bistbit.com/invite/{{ $invitation_code }}</b></p>
+          <b onclick="copyToClipboard(this)" id="matna4">https://20bash.bistbit.com/invite/{{ $invitation_code }}</b></p>
+          {{-- <button class="copy" onclick="copyToClipboard('#matna4')">کپی لینک</button> --}}
           <b>تعداد نفرات دعوت شده:{{ $invited_users }}</b>
           <br>
           <b>تعداد شانس های مانده: {{ $permitted_act }}</b>

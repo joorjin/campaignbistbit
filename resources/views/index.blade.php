@@ -100,13 +100,11 @@
     @include('part3')
 
     <div class="part4">
-      <img class="img1" src="img/c1.png" alt="">
-      <!-- <div class="text1">تویتر بیت بیست <br>را دنبال کنید</div>
-      <div class="text11">کلیک کنید</div> -->
-      <img class="img2" src="img/c2.png?ver=2" alt="">
-      <img class="img3" src="img/c3.png?ver=2" alt="">
-      <img class="img4" src="img/c4.png?ver=2" alt="">
-      <img class="img5" src="img/c5.png?ver=2" alt="">
+      <a href="link?link=Twitter.com/bistbit"><img class="img1" src="img/c1.png"></a>
+      <a href="link?link=Twitter.com/bistbit&b=2"><img class="img2" src="img/c2.png?ver=2" alt=""></a>
+      <a href="link?link=Instagram.com/bistbit"><img class="img3" src="img/c3.png?ver=2" alt=""></a>
+      <img class="img4" src="img/c4.png?ver=2" onclick="copyToClipboard('#matna4')" alt="">
+      <a href="link?link=bistbit.com"><img class="img5" src="img/c5.png?ver=2" alt=""></a>
     </div>
 
     <div class="part5">
@@ -124,6 +122,7 @@
 
     <div class="part7">
         <p>توجه داشته باشید برای دریافت جوایز خود ، حتما میبایست در صرافی بیست بیت ثبت نام و احراز هویت  نمایید.</p>
+        <br>
     </div>
 
     <div class="part8">
@@ -133,6 +132,16 @@
 
 
     <script>
+        // copy
+        function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        alert('لینک دعوت کپی شد ');
+        }
+
 
         $(document).ready(function () {
 
@@ -325,6 +334,13 @@
    @endisset
 
 
+
+   @isset($_GET['offLink'])
+           <script>
+               alert('یک بار می توانید از این ویژگی استفاده کنید');
+               window.location.href = "/";
+           </script>
+   @endisset
 
    @isset($_GET['register'])
            <script>

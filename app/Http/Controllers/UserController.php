@@ -91,4 +91,80 @@ class UserController extends Controller
 
 
     }
+
+    public function link(Request $request)
+    {
+        $user = User::
+        where('remember_token',$_COOKIE['token'])
+        ->select('social_networks')
+        ->get()
+        ->toArray();
+
+        if ($_GET['link']=='Twitter.com/bistbit') {
+            if ($user[0]['social_networks'][0] == 0) {
+                User::
+                where('remember_token',$_COOKIE['token'])
+                ->update([
+                    "social_networks"=> '1'.$user[0]['social_networks'][1].$user[0]['social_networks'][2].$user[0]['social_networks'][3],
+                    "next_spin"=> now()
+                ]);
+                $url = "https://".$_GET['link'];
+                echo "<script type='text/javascript'>window.location.href='$url'</script>";
+                exit;
+            }
+
+        }
+
+        if(isset($_GET['b'])){
+            if ($_GET['b']==2) {
+                if ($user[0]['social_networks'][1] == 0) {
+                    User::
+                    where('remember_token',$_COOKIE['token'])
+                    ->update([
+                        "social_networks"=> $user[0]['social_networks'][0].'1'.$user[0]['social_networks'][2].$user[0]['social_networks'][3],
+                        "next_spin"=> now()
+                    ]);
+                    $url = "https://".$_GET['link'];
+                    echo "<script type='text/javascript'>window.location.href='$url'</script>";
+                    exit;
+                }
+
+
+            }
+        }
+
+        if ($_GET['link']=='Instagram.com/bistbit') {
+            if ($user[0]['social_networks'][2] == 0) {
+                User::
+                where('remember_token',$_COOKIE['token'])
+                ->update([
+                    "social_networks"=> $user[0]['social_networks'][0].$user[0]['social_networks'][1].'1'.$user[0]['social_networks'][3],
+                    "next_spin"=> now()
+                ]);
+                $url = "https://".$_GET['link'];
+                echo "<script type='text/javascript'>window.location.href='$url'</script>";
+                exit;
+            }
+
+
+        }
+        if ($_GET['link']=='bistbit.com') {
+            if ($user[0]['social_networks'][3] == 0) {
+                User::
+                where('remember_token',$_COOKIE['token'])
+                ->update([
+                    "social_networks"=> $user[0]['social_networks'][0].$user[0]['social_networks'][1].$user[0]['social_networks'][2].'1',
+                    "next_spin"=> now()
+                ]);
+                $url = "https://".$_GET['link'];
+                echo "<script type='text/javascript'>window.location.href='$url'</script>";
+                exit;
+            }
+
+
+        }
+
+
+        return redirect('/?offLink=0');
+    }
 }
