@@ -17,7 +17,7 @@
 
         @else
             @foreach ($award_wonss as $item)
-                <p><a style="color: #000" href="show_aw?code={{ $item[0]['code'] }}"><?php echo($item[0]['name']); ?></a></p>
+                <p><a style="color: #000" href="show_aw?code={{ $item[0]['code'] }}" target=”_blank”><?php echo($item[0]['name']); ?></a></p>
             @endforeach
         @endif
       </div>
