@@ -60,12 +60,12 @@ class QueueController extends Controller
 
         $permitted_act = $user['permitted_act'];
         if ($permitted_act == 0) {
-         // add next_spin
-        // User::
-        // where('id',$user->id)
-        // ->update([
-        //     "next_spin"=> Carbon::now()->addMinutes(10080)
-        // ]);
+        //  add next_spin
+        User::
+        where('id',$user->id)
+        ->update([
+            "next_spin"=> Carbon::now()->addMinutes(10080)
+        ]);
         }else {
             User::
             where('id',$user->id)
@@ -166,7 +166,7 @@ class QueueController extends Controller
 
 
         $queue = Queue::get();
-        
+
 
         for ($i=0; $i < $number; $i++) {
             $queues = new Queue();
