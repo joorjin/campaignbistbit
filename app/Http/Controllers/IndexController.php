@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Active_awards;
 use App\Models\Award_won;
 use App\Models\Awards;
 use App\Models\invited_users;
@@ -33,11 +34,14 @@ class IndexController extends Controller
 
 
                 $phone = $user[0]['phone'];
-
                 $award_wons = Award_won::where('user_id',$user[0]['id'])->get();
                 if ($award_wons->count() != 0) {
                     foreach ($award_wons as $item) {
-                        $award_wonss[] = Awards::where('id',$item->awards_id)->select('name')->get();
+                        $award_wonss[] = Awards::
+                        leftjoin('active_awards', 'awards.id', 'active_awards.award_id')
+                        ->where('awards.id',$item->awards_id)
+                        ->select('name','code')
+                        ->get();
                     }
                 }else {
                     $award_wonss = 'new_login';
@@ -47,16 +51,16 @@ class IndexController extends Controller
                 where('caller_id',$user[0]['id'])
                 ->count();
 
-
                 if (Session::has('awrads'))
                 {
                     $awrads = session('awrads');
                     $reques->session()->forget('awrads');
-                    return view('index',compact('login','awrads','phone','award_wonss','invitation_code','invited_users','permitted_act'));
+
+
+                    return view('index',compact('login','awrads','phone','award_wonss','invitation_code','invited_users','permitted_act','award_wons'));
                 }
 
-
-                return view('index',compact('login','award_wonss','phone','invitation_code','invited_users','permitted_act'));
+                return view('index',compact('login','award_wonss','phone','invitation_code','invited_users','permitted_act','award_wons'));
             }
         }
 

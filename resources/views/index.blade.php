@@ -248,7 +248,8 @@
            $number = 3;
        }
 
-
+    //    session('awrads');
+    
    echo '<script type="text/javascript">',
    'spin('.$number.',"'.$item->name.'");',
    'setTimeout(para2, 5000);',

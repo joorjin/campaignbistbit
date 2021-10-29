@@ -18,6 +18,8 @@ class CreateAwardWonsTable extends Migration
             $table->integer('user_id');
             $table->integer('awards_id');
             $table->string('status')->default('1');
+            $table->string('code')->nullable();
+            $table->string('code_id')->nullable();
             $table->timestamps();
         });
     }

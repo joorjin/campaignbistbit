@@ -18,7 +18,7 @@ class AwardWonController extends Controller
             where('phone',$phone)
             ->join('award_wons', 'users.id','award_wons.user_id')
             ->join('awards', 'award_wons.awards_id','awards.id')
-            ->select('award_wons.id','phone','awards.name','status')
+            ->select('award_wons.id','phone','awards.name','status','code')
             ->get();
 
             return view('panel.checkAwardWon',compact('info'));

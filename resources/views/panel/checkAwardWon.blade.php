@@ -18,6 +18,8 @@
         @foreach ($info as $item)
             <b>{{ $item->name }}</b>
             <br>
+            کد : {{ $item->code }}
+            <br>
             @if ($item->status == 1)
                 <b style="color: #04ff00">هنوز اهدا نشده</b>
                 <button onclick="window.location.href='del2m5pon59782dfjkk?phone=<?php echo $item->phone; ?>&id=<?php echo $item->id; ?>'">اهدا شد</button>

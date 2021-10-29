@@ -16,7 +16,7 @@ class CreateActiveAwardsTable extends Migration
         Schema::create('active_awards', function (Blueprint $table) {
             $table->id();
             $table->integer('award_id');
-            $table->string('code');
+            $table->string('code')->nullable();;
             $table->integer('user_id');
             $table->integer('status');
             $table->timestamps();

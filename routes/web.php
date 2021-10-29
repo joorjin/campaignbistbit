@@ -36,8 +36,10 @@ Route::any('/invite/{checkLink}', [InvitedUsersController::class, 'checkLink']);
 
 //
 Route::any('/checkAwardWon2m5pon59782dfjkkhcnisn', [AwardWonController::class, 'checkAwardWon']);
+
 Route::any('/del2m5pon59782dfjkk', [AwardWonController::class, 'del']);
 
+Route::view('/show_aw', 'show_aw');
 
 Route::get('/clear-cache', function() {
     Artisan::call('route:cache');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Award_won;
 use App\Models\Awards;
 use App\Models\Queue;
 use App\Models\Start;
@@ -161,7 +162,7 @@ class StartController extends Controller
 
             //Discount -0/02 ٪
             $start = new Awards;
-            $start->name = '-0/02 % تخفیف';
+            $start->name = '-0/2 % تخفیف';
             $start->delivery_in_time = 540;
             $start->time_open=Carbon::now();
             $start->number = 10000;
@@ -171,7 +172,7 @@ class StartController extends Controller
 
             //Discount -0/03 ٪
             $start = new Awards;
-            $start->name = '-0/03 % تخفیف';
+            $start->name = '-0/3 % تخفیف';
             $start->delivery_in_time = 2760;
             $start->time_open=Carbon::now();
             $start->number = 5000;
@@ -182,7 +183,7 @@ class StartController extends Controller
 
             //Discount -0/04 ٪
             $start = new Awards;
-            $start->name = '-0/04 % تخفیف';
+            $start->name = '-0/4 % تخفیف';
             $start->delivery_in_time = 2760;
             $start->time_open=Carbon::now();
             $start->number = 25;
@@ -193,7 +194,7 @@ class StartController extends Controller
 
             //Discount -0/05 ٪
             $start = new Awards;
-            $start->name = '-0/05 % تخفیف';
+            $start->name = '-0/5 % تخفیف';
             $start->delivery_in_time = 9780;
             $start->time_open=Carbon::now();
             $start->number = 12;
@@ -205,7 +206,7 @@ class StartController extends Controller
 
             //Discount -0/06 ٪
             $start = new Awards;
-            $start->name = '-0/06 % تخفیف';
+            $start->name = '-0/6 % تخفیف';
             $start->delivery_in_time = 20160;
             $start->time_open=Carbon::now();
             $start->number = 6;
@@ -230,8 +231,15 @@ class StartController extends Controller
                 ->update([
                     "time_open"=> Carbon::now()->addMinutes($awards[$i]->delivery_in_time),
                 ]);
-            }
 
+
+            }
+            $award_wons = new Award_won();
+            $award_wons->user_id = 0;
+            $award_wons->awards_id = 0;
+            $award_wons->code = 0;
+            $award_wons->code_id = 0;
+            $award_wons->save();
 
 echo "با  موفقیت انجام شد";
         }else{

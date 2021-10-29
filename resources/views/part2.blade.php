@@ -10,17 +10,17 @@
       <div class="text2">
           <br>
         <b>جوایز من</b>
+        <br>
+        <code style="font-size: 40%; color: #f00;"> برای نمایش کد تخفیف روی آن کلیک کنید </code>
         <p></p>
         @if ($award_wonss == 'new_login')
 
         @else
             @foreach ($award_wonss as $item)
-                <p><?php echo($item[0]['name']); ?></p>
+                <p><a style="color: #000" href="show_aw?code={{ $item[0]['code'] }}"><?php echo($item[0]['name']); ?></a></p>
             @endforeach
         @endif
-
       </div>
-
       <div class="text3">
         <p>لینک دعوت شما :
           <br>
@@ -32,6 +32,7 @@
           <br>
           <b></b>
       </div>
+
     </div>
   </div>
   <!-- end part 2 -->

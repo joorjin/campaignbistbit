@@ -9,15 +9,13 @@ use Illuminate\Http\Request;
 use App\Models\Queue;
 use App\Models\User;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Session;
-
+use Illuminate\Support\Facades\Storage;
+use phpDocumentor\Reflection\Types\Null_;
 
 class QueueController extends Controller
 {
     public function checkLicense(Request $request)
     {
-
-
         if (!isset($_COOKIE['token'])) {
             return redirect('/?login=falss');
         }
@@ -63,11 +61,11 @@ class QueueController extends Controller
         $permitted_act = $user['permitted_act'];
         if ($permitted_act == 0) {
          // add next_spin
-        User::
-        where('id',$user->id)
-        ->update([
-            "next_spin"=> Carbon::now()->addMinutes(10080)
-        ]);
+        // User::
+        // where('id',$user->id)
+        // ->update([
+        //     "next_spin"=> Carbon::now()->addMinutes(10080)
+        // ]);
         }else {
             User::
             where('id',$user->id)
@@ -93,6 +91,7 @@ class QueueController extends Controller
 
 
 
+
         $awrads =  Awards::
         where('id',$award_id)
         ->get();
@@ -105,28 +104,48 @@ class QueueController extends Controller
         }
 
 
-        $del = Queue::where('id', $queue_id)->delete();
+        Queue::where('id', $queue_id)->delete();
+
+
+
+        if ($awards_type == "discount") {
+            if ($award_id == 13) {
+                $text = Storage::get('off/0.2.txt');
+            }elseif ($award_id == 14) {
+                $text = Storage::get('off/0.3.txt');
+            }elseif ($award_id == 15) {
+                $text = Storage::get('off/0.4.txt');
+            }elseif ($award_id == 16) {
+                $text = Storage::get('off/0.5.txt');
+            }elseif ($award_id == 17) {
+                $text = Storage::get('off/0.6.txt');
+            }
+
+            $Award_won = Award_won::
+            orderBy('code_id','DESC')
+            ->whereNotNull('code_id')
+            ->first();
+            $res =  explode(PHP_EOL,$text);
+
+            $award_code = $res[$Award_won['code_id']+1];
+            $Award_won_num =$Award_won['code_id']+1;
+        }else {
+            $award_code = null;
+            $Award_won_num = null;
+        }
+
+
 
 
         $award_wons = new Award_won;
         $award_wons->user_id = $user->id;
         $award_wons->awards_id = $award_id;
+        $award_wons->code = $award_code;
+        $award_wons->code_id = $Award_won_num;
         $award_wons->save();
 
 
-
-
-
-        // rand
-        $seed = str_split('ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        .'0123456789');
-        shuffle($seed);
-        $rand = '';
-        $token ='';
-        foreach (array_rand($seed, 9) as $k) $rand .= $seed[$k];
-            // end rand
-            $award_code = $rand;
-
+            session(['code_off' => $awrads]);
 
         if ($awards_type == 'cash' || $awards_type == 'discount') {
             $active_awards = new Active_awards;
@@ -144,6 +163,10 @@ class QueueController extends Controller
         where('time_open','<',Carbon::now())
         ->get();
         $number =count( $awards_add_queue);
+
+
+        $queue = Queue::get();
+        
 
         for ($i=0; $i < $number; $i++) {
             $queues = new Queue();
