@@ -43,6 +43,9 @@
               <a class="nav-link" href="#spin-location">گردونه</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="https://bistbit.com"> بیست بیت</a>
+              </li>
+            <li class="nav-item">
               <a class="nav-link" href="https://Mag.bistbit.com">مجله خبری</a>
             </li>
             <li class="nav-item">
