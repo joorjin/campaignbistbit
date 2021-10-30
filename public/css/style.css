@@ -425,6 +425,10 @@ body{
     font-size: 20px;
 }
 
+.navbar-nav{
+    position: relative;
+    left: 59px;
+}
 
 header{
     position: relative;
