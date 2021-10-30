@@ -249,7 +249,7 @@
        }
 
     //    session('awrads');
-    
+
    echo '<script type="text/javascript">',
    'spin('.$number.',"'.$item->name.'");',
    'setTimeout(para2, 5000);',
@@ -326,6 +326,13 @@
                window.location.href = "/";
            </script>
    @endisset
+
+   @isset($_GET['nologin'])
+   <script>
+       alert('ابتدا وارد حساب کاربری شوید!');
+       window.location.href = "/";
+   </script>
+@endisset
 
    @isset($_GET['spin_permission'])
            <script>

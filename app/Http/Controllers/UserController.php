@@ -94,6 +94,9 @@ class UserController extends Controller
 
     public function link(Request $request)
     {
+        if (!isset($_COOKIE['token'])) {
+            return redirect('/?nologin');
+        }
         $user = User::
         where('remember_token',$_COOKIE['token'])
         ->select('social_networks')
