@@ -1461,17 +1461,12 @@ header{
         height: 780px;
     }
 }
-/* @media screen and (max-width: 950px) {
-    .part3{
-        height: 250px;
-    }
-    .part3 .spin-loc {
-        position: relative;
-        width: 200px;
-        right: calc(100% - 250px);
+@media screen and (max-width: 310px) {
+    .part5 .text{
+        line-height: 30px;
     }
 
-} */
+}
 
 
 

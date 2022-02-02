@@ -71,11 +71,7 @@
         <img src="img/Cloud-D.png" alt="bistbit" class="CloudD">
         <div class="text">
             <img src="img/logo.svg" alt="">
-          <h3>جــشــنــواره پــایــیــزه صــرافـی بــیـست بــیـت</h3>
-          <h2>بــیــست بـــاش !</h2>
-          <p>عضویـت و احـراز هویــت:۵ =امتیاز</p>
-          <p>هـــر رفــرال ثــبــت نـــام=۱امتیاز</p>
-          <p style="margin-bottom: -40px;">هر رفرال احراز هویت شده=۵امتیاز</p>
+            <img src="img/amnn.png" alt="">
           <br>
           <a href="#spin-location"><button> شانستو امتحان کن </button></a>
         </div>
