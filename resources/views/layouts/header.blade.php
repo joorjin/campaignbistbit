@@ -67,13 +67,13 @@
         <img src="img/Cloud-up.png" alt="CloudD" class="CloudDa">
         <img src="img/01-h (3).png" alt="header" class="background">
         <!-- <img src="img/Stars.png" alt="star" class="star"> -->
-        <img src="img/Caracter.png" alt="bistbit" class="Caracter">
+        <img src="img/new5.png" alt="bistbit" class="Caracter">
         <img src="img/Cloud-D.png" alt="bistbit" class="CloudD">
         <div class="text">
-            <img src="img/logo.svg" alt="">
+            {{-- <img src="img/logo.svg" alt=""> --}}
             <img src="img/amnn.png" alt="">
           <br>
-          <a href="#spin-location"><button> شانستو امتحان کن </button></a>
+          {{-- <a href="#spin-location"><button> شانستو امتحان کن </button></a> --}}
         </div>
         <div class="startbox">
             <img src="/img/star" alt="" class="star star1">

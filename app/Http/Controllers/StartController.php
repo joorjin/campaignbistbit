@@ -28,64 +28,64 @@ class StartController extends Controller
 
             // ledger nano S
             $start = new Awards;
-            $start->name = 'ledger nano S';
+            $start->name = '1 sol';
             $start->delivery_in_time = 50400;
             $start->time_open=Carbon::now()->addMinutes(50400);
-            $start->number = 2;
-            $start->number_left=2;
-            $start->type = 'physical';
+            $start->number = 1;
+            $start->number_left=1;
+            $start->type = 'sat';
             $start->save();
 
             // mi band
             $start = new Awards;
-            $start->name = 'mi band 5';
+            $start->name = '0.1 sol';
             $start->delivery_in_time = 25920;
             $start->time_open=Carbon::now()->addMinutes(25920);
-            $start->number = 6;
-            $start->number_left=6;
-            $start->type = 'physical';
+            $start->number = 7;
+            $start->number_left=7;
+            $start->type = 'sat';
             $start->save();
 
             // 10,000 sat
             $start = new Awards;
-            $start->name = '10,000 ساتوشی';
+            $start->name = '5 SFP';
             $start->delivery_in_time = 2880;
             $start->time_open=Carbon::now()->addMinutes(2880);
-            $start->number = 48;
-            $start->number_left= 48;
+            $start->number = 20;
+            $start->number_left= 20;
             $start->type = 'sat';
             $start->save();
 
 
             // 7,500 sat
             $start = new Awards;
-            $start->name = '7,500 ساتوشی';
+            $start->name = '2400 SC';
             $start->delivery_in_time = 2460;
             $start->time_open=Carbon::now()->addMinutes(2460);
-            $start->number = 48;
-            $start->number_left= 48;
+            $start->number = 5;
+            $start->number_left= 5;
             $start->type = 'sat';
             $start->save();
 
 
             // 5,000 sat
             $start = new Awards;
-            $start->name = '5,000 ساتوشی';
+            $start->name = '10 sand';
             $start->delivery_in_time = 2520;
             $start->time_open=Carbon::now()->addMinutes(2520);
-            $start->number = 48;
-            $start->number_left= 48;
+            $start->number = 5;
+            $start->number_left= 5;
             $start->type = 'sat';
             $start->save();
 
 
             // 2,000 sat
             $start = new Awards;
-            $start->name = '2,000 ساتوشی';
+            $start->name = '150 celr';
             $start->delivery_in_time = 600;
             $start->time_open=Carbon::now()->addMinutes(600);
-            $start->number = 180;
-            $start->number_left= 180;
+            $start->number = 20;
+            $start->number_left= 20;
             $start->type = 'sat';
             $start->save();
 
@@ -93,33 +93,33 @@ class StartController extends Controller
 
             // 750 sat
             $start = new Awards;
-            $start->name = '750 ساتوشی';
+            $start->name = '1200 SC';
             $start->delivery_in_time = 254;
             $start->time_open=Carbon::now()->addMinutes(254);
-            $start->number = 480;
-            $start->number_left= 480;
+            $start->number = 50;
+            $start->number_left= 50;
             $start->type = 'sat';
             $start->save();
 
 
             //250 sat
             $start = new Awards;
-            $start->name = '250 ساتوشی';
+            $start->name = '1 SUSHI';
             $start->delivery_in_time = 152;
             $start->time_open=Carbon::now()->addMinutes(152);
-            $start->number = 960;
-            $start->number_left= 960;
+            $start->number = 20;
+            $start->number_left= 20;
             $start->type = 'sat';
             $start->save();
 
 
             //125 sat
             $start = new Awards;
-            $start->name = '125 ساتوشی';
+            $start->name = '5 CTK';
             $start->delivery_in_time = 261;
             $start->time_open=Carbon::now()->addMinutes(261);
-            $start->number = 480;
-            $start->number_left= 480;
+            $start->number = 50;
+            $start->number_left= 50;
             $start->type = 'sat';
             $start->save();
 
@@ -127,35 +127,35 @@ class StartController extends Controller
 
             //400 T
             $start = new Awards;
-            $start->name = '400,000 تومان';
+            $start->name = '1 SAND';
             $start->delivery_in_time = 11520;
             $start->time_open=Carbon::now()->addMinutes(11520);
-            $start->number = 10;
-            $start->number_left= 10;
-            $start->type = 'cash';
+            $start->number = 20;
+            $start->number_left= 20;
+            $start->type = 'sat';
             $start->save();
 
 
 
             //200 T
             $start = new Awards;
-            $start->name = '200,000 تومان';
+            $start->name = '600 SC';
             $start->delivery_in_time = 10080;
             $start->time_open=Carbon::now()->addMinutes(10080);
-            $start->number = 10;
-            $start->number_left= 10;
-            $start->type = 'cash';
+            $start->number = 30;
+            $start->number_left= 30;
+            $start->type = 'sat';
             $start->save();
 
 
             //100 T
             $start = new Awards;
-            $start->name = '100,000 تومان';
+            $start->name = '12 SFP';
             $start->delivery_in_time = 6660;
             $start->time_open=Carbon::now()->addMinutes(6660);
-            $start->number = 20;
-            $start->number_left= 20;
-            $start->type = 'cash';
+            $start->number = 12;
+            $start->number_left= 12;
+            $start->type = 'sat';
             $start->save();
 
 
@@ -215,7 +215,6 @@ class StartController extends Controller
             $start->save();
 
 
-            sleep(2);
             $awards = Awards::
             where('time_open','<',Carbon::now())
             ->get();

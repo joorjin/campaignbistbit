@@ -57,6 +57,7 @@ class IndexController extends Controller
                     $reques->session()->forget('awrads');
 
 
+                    
                     return view('index',compact('login','awrads','phone','award_wonss','invitation_code','invited_users','permitted_act','award_wons'));
                 }
 
