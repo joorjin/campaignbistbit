@@ -599,8 +599,8 @@ header .text {
 }
 
 header .text img {
-    margin-top: 65px;
-    width: 40%;
+    margin-top: 161px;
+    width: 77%;
     margin-right: 10%;
 }
 
@@ -1121,7 +1121,7 @@ header .CloudD {
         top: -68px;
     }
     .part3 {
-        height: 450px;
+        height: 500px;
     }
     .part3 .spin-loc {
         position: relative;
