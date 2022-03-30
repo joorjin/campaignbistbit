@@ -1352,6 +1352,18 @@ header .CloudD {
     header .startbox {
         top: -38%;
     }
+    .part3 .Triangle {
+        width: 1px;
+        height: 1px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 45px solid #ffffff;
+        margin-bottom: -37px;
+        z-index: 1;
+        left: -80px;
+        top: -10px;
+        position: relative;
+    }
 }
 
 @media screen and (max-width: 800px) {
