@@ -848,7 +848,6 @@ header .CloudD {
 
 .part4 .text11 {
     position: absolute;
-    margin-top: -28%;
     margin-right: 23%;
     font-weight: bolder;
     color: #000;
@@ -1322,6 +1321,11 @@ header .CloudD {
     }
     header .startbox {
         top: -20%;
+    }
+    header .text img {
+        margin-top: 50px;
+        width: 77%;
+        margin-right: 10%;
     }
     .startbox {
         position: relative;
