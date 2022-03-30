@@ -1423,6 +1423,12 @@ header .CloudD {
         font-weight: bolder;
         font-size: 11px;
     }
+    header .Caracter {
+        margin-top: -65%;
+        left: -31%;
+        position: relative;
+        width: 22%;
+    }
 }
 
 @media screen and (max-width: 500px) {
