@@ -1542,7 +1542,10 @@ header .CloudD {
 @media screen and (max-width: 310px) {
     .part5 .text {
         line-height: 30px;
-        font-size: 15px;
+        font-size: 14px;
+    }
+    .startbox button {
+        font-size: 26px;
     }
 }
 
