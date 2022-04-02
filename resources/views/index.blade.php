@@ -140,7 +140,7 @@
     </div>
 
     <div class="part8">
-        <p>تمامی حقوق برای صرافی بیست بیت محفوظ است. <i class="fa fa-copyright"></i></p>
+        <p>تمامی حقوق برای صرافی بیست بیت محفوظ است <i class="fa fa-copyright"></i></p>
     </div>
 
 
